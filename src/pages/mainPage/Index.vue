@@ -1,5 +1,6 @@
 <template>
   <div>
+    <CustomButton />
     <p class="text-center">
       I am Index.vue
     </p>
@@ -9,10 +10,11 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import CustomButton from 'components/customButton/CustomButton.vue'
 
 export default defineComponent({
   name: 'PageIndex',
-  components: { },
+  components: { CustomButton },
   setup () {
     return { }
   }

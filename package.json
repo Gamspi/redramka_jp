@@ -18,6 +18,7 @@
     "quasar": "^2.0.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0",
+    "vue3-styled-components": "^1.2.1",
     "vuex": "^4.0.1"
   },
   "devDependencies": {

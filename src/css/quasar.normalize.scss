@@ -1,0 +1,116 @@
+@import 'app.variables.scss';
+@import "mixns.scss";
+
+html body {
+  font-family: $Roboto;
+  font-size: 1.4rem;
+  color: $cBlack;
+  overflow-x: hidden;
+  overflow-y: auto;
+  user-select: none;
+  min-width: $minContentWidth;
+}
+.q-page-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: calc(var(--vh, 1vh) * 100);
+  z-index: 50000;
+}
+.main-container {
+  min-width: $minContentWidth;
+}
+html {
+  // 1rem === 10px
+  font-size: calc(100vw / #{$mobileBreakpoint} * 10);
+  @include minMediaTablet {
+    font-size: calc(100vw / #{$tabletBreakpoint} * 10);
+  }
+  @include minMediaDesktop {
+    font-size: calc(100vw / #{$desktopBreakpoint} * 10);
+  }
+  @include minMediaMaxDesktop {
+    font-size: calc(100vw / #{$wideDesktopBreakpoint} * 10);
+  }
+}
+a {
+  text-decoration: none;
+}
+
+.text-price {
+  cursor: default;
+  &:after {
+    content: 'a';
+    font-family: $Rub,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif
+  }
+}
+
+/*   Reset input styles  */
+
+.q-field--filled .q-field__control {
+  border-radius: $fBorderRadius;
+  background: $fBackgroundColor;
+}
+.q-field__control {
+  height: $fFieldHeight;
+}
+
+.q-field--filled .q-field__control:before,
+.q-field--filled.q-field--highlighted .q-field__control:before {
+  border-bottom: none;
+  background: none;
+}
+
+.q-field__native {
+  font-size: $fFieldFontSize;
+  color: $fFieldTextColor;
+
+  &::placeholder {
+    font-size: $fFieldFontSize;
+    font-weight: normal;
+  }
+}
+input, input:focus-visible {
+  outline: none;
+  box-shadow: none;
+  font-size: $fFieldFontSize;
+  color: $fFieldTextColor;
+
+  &::placeholder {
+    font-size: $fFieldFontSize;
+    font-weight: normal;
+  }
+}
+
+/*   Reset button styles  */
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.8;
+}
+.q-btn::before,
+.q-btn--actionable.q-btn--standard:active:before,
+.q-btn--actionable.q-btn--standard.q-btn--active:before {
+  box-shadow: none;
+}
+.q-field--filled .q-field__control:after {
+  height: 0;
+}
+.q-btn .q-ripple {
+  display: none!important;
+}
+.q-btn, .q-btn__content {
+  text-transform: initial;
+}
+
+
+/*   Reset tab styles  */
+.q-tab .q-ripple {
+  display: none;
+}
+.q-tab-panel {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+

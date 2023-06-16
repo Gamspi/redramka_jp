@@ -1,0 +1,30 @@
+
+/* fade animation */
+.fade-enter-active {
+  animation-name: fade-in;
+  animation-duration: .3s;
+  transition-timing-function: ease-out;
+}
+.fade-leave-active {
+  animation-name: fade-out;
+  animation-duration: .15s;
+  transition-timing-function: ease-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,17 +1,19 @@
 @import "mixns";
-/* fade animation */
-.fade-enter-active {
-  animation-name: fade-in;
-  animation-duration: .3s;
-  transition-timing-function: ease-out;
+.main-loader-enter-active,
+.main-loader-leave-active {
+  transition: opacity .5s ease .8s;
+  &  * {
+    transition: opacity .5s ease;
+  }
 }
 
-.fade-leave-active {
-  animation-name: fade-out;
-  animation-duration: .15s;
-  transition-timing-function: ease-out;
+.main-loader-enter-from,
+.main-loader-leave-to {
+  opacity: 0;
+  &  * {
+    opacity: 0;
+  }
 }
-
 @keyframes fade-in {
   0% {
     opacity: 0;

@@ -3,8 +3,8 @@ $minContentWidth: 320px;
 
 /*   Font variables   */
 $fontpostfix: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
-$Quicksand: Quicksand,  sans-serif, $fontpostfix;
-$Nunito: Nunito,  sans-serif, $fontpostfix;
+$Quicksand: Quicksand, sans-serif, $fontpostfix;
+$Nunito: Nunito, sans-serif, $fontpostfix;
 
 /*   Mobile variables   */
 $footer: 56px;
@@ -12,6 +12,8 @@ $header: 44px;
 $layout: 100px;
 
 /*   Color variables   */
+$cBlackPrimary: #464646;
+$cBlackSecondary: #1D1D1D;
 $cWhite: #fff;
 $cBlack: #1D1D1D;
 $cGray: #EBEBF2;

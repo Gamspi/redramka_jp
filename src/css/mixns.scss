@@ -4,27 +4,35 @@
   @media (min-width: $mobileBreakpoint + px) {
     @content
   }
-};
+}
+
+;
 
 @mixin minMediaTablet {
   @media (min-width: $tabletBreakpoint + px) {
     @content
   }
-};
+}
+
+;
 
 @mixin minMediaDesktop {
   @media (min-width: $desktopBreakpoint + px) {
     @content
   }
-};
+}
+
+;
 
 @mixin minMediaMaxDesktop {
   @media (min-width: $wideDesktopBreakpoint + px) {
     @content
   }
-};
+}
 
-@mixin fontFace ($family, $weight){
+;
+
+@mixin fontFace($family, $weight) {
   @font-face {
     font-family: $family;
     src: url('src/assets/fonts/#{$family}/#{$family}#{$weight}.woff2') format('woff2'),

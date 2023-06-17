@@ -1,7 +1,9 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-page-container class="j-fixed-element">
-      <MainLoader  />
+      <MainLoader
+        :is-show="IsGeneralLoading"
+      />
 
       <router-view v-slot="{ Component }">
         <component
@@ -15,7 +17,7 @@
 
 <script lang="ts">
 
-import { defineComponent, onMounted } from 'vue'
+import { defineComponent } from 'vue'
 
 import useController from './controller'
 import MainLoader from './components/mainLoader/MainLoader.vue'
@@ -25,11 +27,8 @@ export default defineComponent({
   components: { MainLoader },
   setup () {
     const {
-      IsGeneralLoading,
-      onMountedCallback
+      IsGeneralLoading
     } = useController()
-
-    onMounted(onMountedCallback)
 
     return {
       IsGeneralLoading

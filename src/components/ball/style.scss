@@ -1,17 +1,21 @@
 @import "src/css/app.variables";
+
 .ball {
-  width: 31px;
-  height: 31px;
+  width: 3.1rem;
+  height: 3.1rem;
   border-radius: 50%;
-  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 .3rem 2rem rgba(0, 0, 0, 0.05);
+
   &--animated {
-      animation-duration: 90s;
-    animation-timing-function: cubic-bezier(0,0,1,1) ;
+    animation-duration: 90s;
+    animation-timing-function: cubic-bezier(0, 0, 1, 1);
     animation-iteration-count: infinite;
   }
+
   &--red {
     background: linear-gradient(180deg, $cRed01 0%, $cRed02 100%);
   }
+
   &--blue {
     animation-direction: reverse;
     background: linear-gradient(180deg, $cBlue01 0%, $cBlue02 100%);

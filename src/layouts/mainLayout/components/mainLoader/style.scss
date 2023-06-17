@@ -1,0 +1,104 @@
+@import "src/css/app.variables";
+
+.main-loader {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background: $cWhite;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__logo {
+    opacity: 0;
+    object-fit: cover;
+    height: 34.33rem;
+    animation: main-loader-logo 1s linear forwards .3s;
+  }
+
+  &__title, &__sub-title {
+    padding-left: 3.8rem;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 6.97rem;
+    line-height: 8.4rem;
+    margin-bottom: 1.4rem;
+    letter-spacing: 0.1rem;
+  }
+
+  &__sub-title {
+    font-weight: 400;
+    font-size: 55.771px;
+    line-height: 70px;
+    letter-spacing: 0.06rem;
+  }
+
+  &__body {
+    display: flex;
+  }
+
+  &__content {
+    opacity: 0;
+    overflow: hidden;
+    max-width: 0;
+    animation: main-loader-content 2s linear forwards 1.5s;
+  }
+
+  &__footer {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    opacity: 0;
+    padding-top: 4rem;
+    animation: fade-in 1s linear forwards 2.5s;
+  }
+
+  &__wrapper {
+    position: relative;
+    margin: 0 0 -1.4rem 0;
+    animation: main-loader-wrapper .3s linear forwards .99s;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 32px;
+    text-align: end;
+    padding-right: 1.2rem;
+    letter-spacing: 0.03rem;
+  }
+
+  &__ball {
+    position: absolute;
+
+    &:first-child {
+      top: 38.5rem;
+      left: 7.9rem;
+    }
+
+    &:nth-child(2) {
+      bottom: 25.6rem;
+      right: 21.8rem;
+    }
+
+    &:nth-child(3) {
+      top: 13.7rem;
+      right: 15.6rem;
+    }
+
+    &:nth-child(4) {
+      bottom: 12rem;
+      left: 31.2rem;
+    }
+  }
+
+  &__balls {
+    opacity: 0;
+    animation: fade-in 1s linear 3.5s forwards;
+  }
+}

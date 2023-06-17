@@ -1,10 +1,11 @@
-
+@import "mixns";
 /* fade animation */
 .fade-enter-active {
   animation-name: fade-in;
   animation-duration: .3s;
   transition-timing-function: ease-out;
 }
+
 .fade-leave-active {
   animation-name: fade-out;
   animation-duration: .15s;
@@ -20,11 +21,45 @@
   }
 }
 
-@keyframes fade-out {
+@keyframes main-loader-logo {
   0% {
-    opacity: 1;
+    opacity: 0;
+  }
+  70% {
+    height: 34.33rem;
   }
   100% {
-    opacity: 0;
+    opacity: 1;
+    height: 17.5rem;
+  }
+}
+
+@keyframes main-loader-wrapper {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, -4.4rem, 0);
+  }
+}
+
+@keyframes main-loader-content {
+  0% {
+    opacity: 1;
+    max-width: 0;
+  }
+  20% {
+    opacity: 1;
+    max-width: 0;
+  }
+  100% {
+    opacity: 1;
+    max-width: 100vw;
+  }
+}
+
+@for $i from 1 through 4 {
+  @keyframes ball-#{$i} {
+    @include randomAnimation;
   }
 }

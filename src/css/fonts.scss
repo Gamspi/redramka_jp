@@ -1,15 +1,13 @@
-@font-face {
-  font-family: 'Roboto';
-  src: url('../assets/fonts/Roboto.woff') format('woff'),
-      url('../assets/fonts/Roboto.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+@import "mixns";
+$quicksand: 300, 400, 500, 600, 700;
 
-@font-face {
-  font-family: 'Rub';
-  src: url('../assets/fonts/ALSRubl.woff') format('woff'),
-      url('../assets/fonts/ALSRubl.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
+
+@each $item in $quicksand {
+  @include fontFace('Quicksand', $item)
+}
+$nunito: 200, 300, 400, 500, 600, 700, 800, 900;
+
+
+@each $item in $nunito {
+  @include fontFace('Nunito', $item)
 }

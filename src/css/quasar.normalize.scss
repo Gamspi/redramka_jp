@@ -1,8 +1,14 @@
 @import 'app.variables.scss';
 @import "mixns.scss";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 html body {
-  font-family: $Roboto;
+  font-family: $Quicksand;
+  font-style: normal;
   font-size: 1.4rem;
   color: $cBlack;
   overflow-x: hidden;
@@ -10,13 +16,15 @@ html body {
   user-select: none;
   min-width: $minContentWidth;
 }
+body {
+  width: 100vw;
+}
 .q-page-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: calc(var(--vh, 1vh) * 100);
-  z-index: 50000;
 }
 .main-container {
   min-width: $minContentWidth;
@@ -42,7 +50,6 @@ a {
   cursor: default;
   &:after {
     content: 'a';
-    font-family: $Rub,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif
   }
 }
 

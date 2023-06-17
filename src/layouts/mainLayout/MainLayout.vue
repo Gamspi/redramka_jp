@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-page-container class="j-fixed-element">
-      <MainLoader v-if="IsGeneralLoading" />
+      <MainLoader  />
 
       <router-view v-slot="{ Component }">
         <component

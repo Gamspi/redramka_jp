@@ -19,8 +19,9 @@ $cBlack: #1D1D1D;
 $cGray: #EBEBF2;
 $cRed01: #FF8E8E;
 $cRed02: #F62424;
-$cBlue01: #4485FFCC;
-$cBlue02: #377DFF;
+$cBlue01: #377DFF;
+$cBlue02: #4485FF;
+$cLightBlue: #37DBFF;
 $cGreen: #39e8a5;
 
 /*   Form variables   */
@@ -32,17 +33,15 @@ $fFieldHeight: 48px;
 $fFieldFontSize: 14px;
 $fFieldTextColor: #9A99A2;
 
-/*   Text variables   */
-$tGray: #9A99A2;
-$tBlack: #1D1D1D;
-
 /*   Background variables   */
 $bgBlack: rgba(29, 29, 29, 0.84);
 $bgWhite: rgba(255, 255, 255, 0.5);
 $bgError: rgba(255, 58, 68, 0.1);
 
 /*  BREAKPOINTS */
-$mobileBreakpoint: 360;
+$mobileBreakpoint: 390;
 $tabletBreakpoint: 768;
-$desktopBreakpoint: 1024;
+$desktopBreakpoint: 1440;
 $wideDesktopBreakpoint: 1440;
+
+$transitionDefault:  .15s linear;

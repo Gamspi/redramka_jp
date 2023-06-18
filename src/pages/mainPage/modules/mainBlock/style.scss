@@ -1,0 +1,58 @@
+@import "src/css/app.variables";
+
+.main-block {
+  padding: 2.9rem 0;
+
+  &__container {
+    padding: 0 1.452rem 0 2.093rem;
+  }
+
+  &__title, &__description {
+
+    text-align: center;
+    letter-spacing: 0.01em;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+    margin-bottom: 2rem;
+  }
+
+  &__header {
+    padding: 0 .727rem;
+    margin-bottom: 2rem;
+  }
+
+  &__description {
+    font-family: $Nunito;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+  }
+
+  &__footer {
+    position: relative;
+  }
+
+  &__achievement {
+    position: absolute;
+    top: -.3rem;
+    left: 0;
+    z-index: 1;
+  }
+
+  &__review {
+    position: absolute;
+    bottom: 0;
+    right: .4rem;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,8 @@
+@import "src/css/templates";
+.main-page {
+  position: relative;
+  &__ball {
+    @extend %ballsPosition;
+    z-index: -1;
+  }
+}

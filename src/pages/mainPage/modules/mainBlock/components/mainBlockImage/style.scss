@@ -1,0 +1,29 @@
+.main-block-image {
+  width: 100%;
+  padding: 1.2rem 1.548rem 1.523rem .907rem;
+  position: relative;
+  z-index: 1;
+
+  &__content {
+    width: 33rem;
+    height: 22.4rem;
+    object-fit: cover;
+  }
+
+  &__dots-blue, &__dots-red {
+    position: absolute;
+    z-index: -1;
+    width: 9.848rem;
+    height: 7.093rem;
+  }
+
+  &__dots-red {
+    top: 0;
+    right: -.1rem;
+  }
+  &__dots-blue{
+    bottom: .5rem;
+    left: -.1rem;
+  }
+
+}

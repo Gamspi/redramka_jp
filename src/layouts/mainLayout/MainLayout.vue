@@ -4,7 +4,7 @@
       <MainLoader
         :is-show="IsGeneralLoading"
       />
-
+      <Header />
       <router-view v-slot="{ Component }">
         <component
           :is="Component"
@@ -21,10 +21,11 @@ import { defineComponent } from 'vue'
 
 import useController from './controller'
 import MainLoader from './components/mainLoader/MainLoader.vue'
+import Header from 'src/modules/header/Header.vue'
 
 export default defineComponent({
   name: 'MainLayout',
-  components: { MainLoader },
+  components: { Header, MainLoader },
   setup () {
     const {
       IsGeneralLoading

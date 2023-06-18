@@ -1,18 +1,14 @@
 <template>
-  <div>
-    <p class="text-center">
-      I am Index.vue
-    </p>
-    <a href="/demo">Demo page</a>
-  </div>
+  <MainPageLayout />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import MainPageLayout from './layout/mainPageLayout/MainPageLayout.vue'
 
 export default defineComponent({
   name: 'PageIndex',
-  components: { },
+  components: { MainPageLayout },
   setup () {
     return { }
   }

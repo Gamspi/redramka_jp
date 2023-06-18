@@ -36,7 +36,7 @@
         <div class="main-loader__wrapper">
           <div class="main-loader__body">
             <img
-              src="../../../../assets/images/mainLoader/loaderLogo.svg"
+              src="../../../../assets/icons/mainLoader/loaderLogo.svg"
               alt="main logo"
               class="main-loader__logo"
             >

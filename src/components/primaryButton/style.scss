@@ -1,0 +1,40 @@
+@import "src/css/app.variables";
+@import "src/css/mixns";
+
+.primary-button {
+  text-align: center;
+  color: $cWhite;
+  background: $cBlue01;
+  padding: 1rem 3.5rem;
+  border-radius: 2.4rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  transition: background-color $transitionDefault;
+  letter-spacing: .01rem;
+
+  &:not(&--bordered) {
+    box-shadow: 0 .4rem .8rem rgba($cBlue01, 0.5);
+    @include hover {
+      background: $cLightBlue;
+    }
+  }
+
+  &--bordered {
+    color: $cBlue01;
+    border: 1px solid $cBlue01;
+    background: none;
+    transition: color $transitionDefault, border $transitionDefault;
+
+    @include hover {
+      color: $cLightBlue;
+      border: 1px solid $cLightBlue;
+    }
+  }
+
+  @include minMediaDesktop {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    padding: 1.2rem 5rem;
+  }
+}

@@ -17,9 +17,15 @@ html body {
   user-select: none;
   min-width: $minContentWidth;
 }
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
 
 h1, h2, h3, h4, h5, h6 {
   color: $cBlackSecondary;
+  font-family: $Nunito;
 }
 
 body {
@@ -139,3 +145,6 @@ input, input:focus-visible {
   overflow-y: hidden;
 }
 
+.container {
+  padding: 0 ;
+}

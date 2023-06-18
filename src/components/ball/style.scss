@@ -1,8 +1,9 @@
 @import "src/css/app.variables";
+@import "src/css/mixns";
 
 .ball {
-  width: 3.1rem;
-  height: 3.1rem;
+  width: 1.6rem;
+  height: 1.6rem;
   border-radius: 50%;
   box-shadow: 0 .3rem 2rem rgba(0, 0, 0, 0.05);
 
@@ -18,7 +19,12 @@
 
   &--blue {
     animation-direction: reverse;
-    background: linear-gradient(180deg, $cBlue01 0%, $cBlue02 100%);
+    background: linear-gradient(180deg, rgba($cBlue02, .8) 0%, $cBlue01 100%);
+  }
+
+  @include minMediaDesktop {
+    width: 3.1rem;
+    height: 3.1rem;
   }
 }
 

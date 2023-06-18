@@ -1,0 +1,52 @@
+@import "src/css/app.variables";
+
+.main-block-review {
+  width: 8rem;
+  box-shadow: 0 .385542rem 1.15663rem rgba(0, 0, 0, 0.15);
+  border-radius: .6rem;
+  padding: 1.3rem .964rem 1.076rem 1.012rem;
+  background: $cWhite;
+
+  &__header {
+    display: flex;
+    margin-bottom: .578rem;
+    align-items: center;
+  }
+
+  &__avatar {
+    width: 1.542rem;
+    height: 1.542rem;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+    margin-right: .482rem;
+  }
+
+  &__body {
+    font-family: $Nunito;
+    display: block;
+    font-weight: 400;
+    font-size: .5rem;
+    line-height: .7rem;
+    letter-spacing: 0.01em;
+    color: $cBlack;
+  }
+
+  &__name {
+    font-family: $Quicksand;
+    font-weight: 600;
+    font-size: .5rem;
+    line-height: .6rem;
+    letter-spacing: 0.01em;
+    color: $cBlack;
+    margin-bottom: .3rem;
+  }
+
+  &__job-title {
+    font-weight: 600;
+    font-size: .3rem;
+    line-height: .4rem;
+    letter-spacing: 0.01em;
+    opacity: 0.5;
+  }
+}

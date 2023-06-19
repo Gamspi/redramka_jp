@@ -1,6 +1,9 @@
 @import "src/css/templates";
+
 .main-page {
   position: relative;
+  overflow: hidden;
+
   &__ball {
     @extend %ballsPosition;
     z-index: -1;

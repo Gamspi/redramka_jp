@@ -1,0 +1,36 @@
+@import "src/css/app.variables";
+@import "src/css/mixns";
+
+.arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.6rem;
+
+  &__label {
+    font-family: $Quicksand;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 3.4rem;
+    color: $cBlue01;
+  }
+
+  &__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+
+    path {
+      stroke: $cBlue01;
+    }
+  }
+
+  @include hover {
+    &__label {
+      color: $cLightBlue;
+    }
+    &__icon {
+      path {
+        stroke: $cLightBlue;
+      }
+    }
+  }
+}

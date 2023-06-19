@@ -8,15 +8,15 @@
       >
       <div class="main-block-review__info">
         <h5 class="main-block-review__name">
-          Bill Adams
+          {{ lang.mainBlock.review.name }}
         </h5>
         <div class="main-block-review__job-title">
-          CEO UpTech
+          {{ lang.mainBlock.review.job }}
         </div>
       </div>
     </div>
     <q class="main-block-review__body">
-      This team is really the best in its field,I don't regret working with them, and will come back again thanks
+      {{ lang.mainBlock.review.text }}
     </q>
   </div>
 </template>
@@ -24,11 +24,15 @@
 <script>
 import { defineComponent } from 'vue'
 import './style.scss'
+import { useLang } from 'src/hooks/useLang'
 
 export default defineComponent({
   name: 'MainBlockReview',
   setup () {
-    return {}
+    const lang = useLang()
+    return {
+      lang
+    }
   }
 })
 </script>

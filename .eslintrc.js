@@ -43,8 +43,9 @@ module.exports = {
     // 'plugin:vue/vue3-recommended', // Priority C: Recommended (Minimizing Arbitrary Choices and Cognitive Overhead)
     'eslint:recommended',
     'plugin:vue/recommended',
-    'standard'
-
+    'standard',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:vue/recommended',
   ],
   plugins: [
     // required to apply rules which need type information

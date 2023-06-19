@@ -2,6 +2,8 @@
 @import "src/css/mixns";
 
 .primary-button {
+  display: flex;
+  gap: 1rem;
   text-align: center;
   color: $cWhite;
   background: $cBlue01;
@@ -13,8 +15,18 @@
   transition: background-color $transitionDefault;
   letter-spacing: .01rem;
 
+  & > svg {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+
   &:not(&--bordered) {
     box-shadow: 0 .4rem .8rem rgba($cBlue01, 0.5);
+
+    path {
+      stroke: $cWhite;
+    }
+
     @include hover {
       background: $cLightBlue;
     }
@@ -26,9 +38,18 @@
     background: none;
     transition: color $transitionDefault, border $transitionDefault;
 
+    path {
+      stroke: $cBlue01;
+      transition: stroke $transitionDefault;
+    }
+
     @include hover {
       color: $cLightBlue;
       border: 1px solid $cLightBlue;
+
+      path {
+        stroke: $cLightBlue
+      }
     }
   }
 

@@ -10,7 +10,15 @@ export const engLocal = {
     },
     achievement: {
       title: 'Great Project',
-      status: 'Done'
+      status: ''
     }
+  },
+  about: {
+    supTitle: 'About Us',
+    title: 'Our Teammate',
+    descriptions: [
+      'We move with make a Creative Strategy for help your business goal, we help to improve your income by a services we have. make your content look interesting and make people look for your business2',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu neque tempor at ut auctor maecenas,Lorem ipsum d'
+    ]
   }
 }

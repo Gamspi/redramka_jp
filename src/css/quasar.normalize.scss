@@ -17,7 +17,9 @@ html body {
   user-select: none;
   min-width: $minContentWidth;
 }
-button {
+
+button, a {
+  text-decoration: none;
   cursor: pointer;
   border: none;
   background: none;
@@ -33,9 +35,6 @@ body {
 }
 
 .q-page-container {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100vw;
   height: calc(var(--vh, 1vh) * 100);
 }
@@ -146,5 +145,23 @@ input, input:focus-visible {
 }
 
 .container {
-  padding: 0 ;
+  padding: 0 2.5rem;
+}
+
+.sup-title {
+  font-family: $Quicksand;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.01em;
+  color: $cBlue01;
+  margin-bottom: 1rem;
+}
+
+.title {
+  color: $cBlackSecondary;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.3rem;
+  letter-spacing: 0.003em;
 }

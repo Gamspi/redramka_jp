@@ -6,7 +6,7 @@ export const useLang = () => {
   const [browserLang] = (window.navigator.language || navigator.language).match(/[a-z]+/g) || ['']
   switch (browserLang) {
     case LangEnum.RU:
-      return ruLocal
+      return engLocal
     case LangEnum.ENG:
       return engLocal
     default:

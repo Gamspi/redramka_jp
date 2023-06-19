@@ -1,0 +1,19 @@
+.about-image-block {
+  position: relative;
+  z-index: 1;
+  padding-top: 1.5rem;
+
+  &__dots {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 10rem;
+    height: 7.093rem;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+
+}

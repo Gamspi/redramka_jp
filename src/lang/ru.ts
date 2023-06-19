@@ -12,5 +12,14 @@ export const ruLocal = {
       title: 'Отличный проект',
       status: 'Сделанный'
     }
+  },
+  about: {
+    supTitle: 'О нас',
+    title: 'Наш товарищ по команде',
+    descriptions: [
+      'Мы продвигаемся с созданием творческой стратегии для достижения вашей бизнес-цели, мы помогаем увеличить ваш доход с помощью услуг, которые у нас есть. сделайте ваш контент интересным и заставьте людей искать ваш бизнес2',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu neque tempor at ut auctor maecenas,Lorem ipsum d'
+    ]
   }
+
 }

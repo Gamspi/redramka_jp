@@ -1,6 +1,22 @@
 <template>
-  <button :class="['primary-button', {'primary-button--bordered': bordered}]">
-    <slot />
+  <a
+    v-if="href"
+    :href="href"
+    :class="['primary-button', {'primary-button--bordered': bordered}]"
+  >
+    <slot name="icon" />
+    <span class="primary-button__label">
+      <slot />
+    </span>
+  </a>
+  <button
+    v-else
+    :class="['primary-button', {'primary-button--bordered': bordered}]"
+  >
+    <slot name="icon" />
+    <span class="primary-button__label">
+      <slot />
+    </span>
   </button>
 </template>
 
@@ -14,6 +30,10 @@ export default defineComponent({
     bordered: {
       type: Boolean,
       default: false
+    },
+    href: {
+      type: String,
+      default: ''
     }
   },
   setup () {

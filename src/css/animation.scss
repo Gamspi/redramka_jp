@@ -1,8 +1,10 @@
 @import "mixns";
+
 .main-loader-enter-active,
 .main-loader-leave-active {
   transition: opacity .5s ease .8s;
-  &  * {
+
+  & * {
     transition: opacity .5s ease;
   }
 }
@@ -10,10 +12,24 @@
 .main-loader-enter-from,
 .main-loader-leave-to {
   opacity: 0;
-  &  * {
+
+  & * {
     opacity: 0;
   }
 }
+
+.fabe-height-enter-active,
+.fabe-height-leave-active {
+  max-height: 20rem;
+  transition: opacity .6s ease, max-height .6s ease;
+}
+
+.fabe-height-enter-from,
+.fabe-height-leave-to {
+  max-height: 0;
+  opacity: 0;
+}
+
 @keyframes fade-in {
   0% {
     opacity: 0;

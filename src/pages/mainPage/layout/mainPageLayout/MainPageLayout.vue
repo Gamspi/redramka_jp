@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent, onMounted, ref } from 'vue'
 import MainBlock from 'pages/mainPage/modules/mainBlock/MainBlock.vue'
 import Ball from 'components/ball/Ball.vue'
 import './style.scss'
@@ -45,9 +45,22 @@ import OurServices from 'pages/mainPage/modules/outServices/OutServices.vue'
 export default defineComponent(
   {
     name: 'MainPageLayout',
-    components: { OurServices, About, Ball, MainBlock },
+    components: {
+      OurServices,
+      About,
+      Ball,
+      MainBlock
+    },
     setup () {
-      return {}
+      const refi = ref(false)
+      onMounted(() => {
+        setTimeout(() => {
+          refi.value = true
+        }, 2000)
+      })
+      return {
+        refi
+      }
     }
   }
 )

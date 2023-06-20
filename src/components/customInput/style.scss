@@ -1,0 +1,78 @@
+@import "src/css/app.variables";
+@import "src/css/mixns";
+
+.custom-input {
+
+  &__body {
+    position: relative;
+    border-radius: 2.4rem;
+    border: .1rem solid $cBlue01;
+    width: 100%;
+    transition: border-color $transitionDefault;
+  }
+
+
+  &__label {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &__value, &__label {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.01em;
+
+  }
+
+  &__value {
+    width: 100%;
+    color: $cBlackSecondary;
+    padding: 1rem 1.6rem;
+  }
+
+  &__label {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 85%;
+    background-color: $cWhite;
+    padding: 0 .4rem;
+    color: $cBlue01;
+    margin: 0 1.2rem;
+    top: 1rem;
+    transition: top $transitionDefault, font-size $transitionDefault, line-height $transitionDefault, color $transitionDefault;
+  }
+
+  &__error {
+    display: block;
+    padding: 0 1.6rem;
+    max-width: 100%;
+    left: 1.7rem;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    color: $cRed03;
+  }
+
+  @include hover {
+    border-color: $cLightBlue;
+    .custom-input__label {
+      color: $cLightBlue;
+    }
+  }
+
+  &--fill &__label, &__value:focus + &__label {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    top: -.9rem;
+  }
+
+  &--error &__body, &--error:hover &__body {
+    border-color: $cRed03;
+
+    .custom-input__label {
+      color: $cRed03;
+    }
+  }
+}

@@ -99,8 +99,8 @@ a {
 input, input:focus-visible {
   outline: none;
   box-shadow: none;
-  font-size: $fFieldFontSize;
-  color: $fFieldTextColor;
+  background: none;
+  border: none;
 
   &::placeholder {
     font-size: $fFieldFontSize;

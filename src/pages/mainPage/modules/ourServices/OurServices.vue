@@ -13,10 +13,22 @@
         <p class="our-services__description">
           {{ lang.ourServices.description }}
         </p>
-        <ArrowLink
-          :label="'test'"
-          href="#"
-        />
+        <div class="our-services__more">
+          <ArrowLink
+            :label="lang.ourServices.moreButton"
+            href="#"
+          />
+        </div>
+        <div class="our-services__cards">
+          <OurServicesCard
+            v-for="item in ourServicesCards"
+            :key="item.to"
+            :label="item.label"
+            :to="item.to"
+            :icon="item.icon"
+            :color="item.color"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -26,14 +38,18 @@
 import { defineComponent } from 'vue'
 import { useLang } from 'src/hooks/useLang'
 import ArrowLink from 'components/arrowLink/ArrowLink.vue'
+import { ourServicesCards } from './constants/cards'
+import './style.scss'
+import OurServicesCard from 'pages/mainPage/modules/ourServices/components/ourServicesCard/OurServicesCard.vue'
 
 export default defineComponent({
   name: 'OurServices',
-  components: { ArrowLink },
+  components: { OurServicesCard, ArrowLink },
   setup () {
     const lang = useLang()
     return {
-      lang
+      lang,
+      ourServicesCards
     }
   }
 })

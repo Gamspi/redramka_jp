@@ -2,7 +2,7 @@
 
 .main-block-review {
   width: 8rem;
-  box-shadow: 0 .385542rem 1.15663rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 .385542rem 1.15663rem rgba($cBlack, 0.15);
   border-radius: .6rem;
   padding: 1.3rem .964rem 1.076rem 1.012rem;
   background: $cWhite;
@@ -29,7 +29,7 @@
     font-size: .5rem;
     line-height: .7rem;
     letter-spacing: 0.01em;
-    color: $cBlack;
+    color: $cBlackSecondary;
   }
 
   &__name {
@@ -38,7 +38,7 @@
     font-size: .5rem;
     line-height: .6rem;
     letter-spacing: 0.01em;
-    color: $cBlack;
+    color: $cBlackSecondary;
     margin-bottom: .3rem;
   }
 

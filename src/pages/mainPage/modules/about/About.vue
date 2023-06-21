@@ -62,7 +62,6 @@ import { useLang } from 'src/hooks/useLang'
 import './style.scss'
 import PrimaryButton from 'components/primaryButton/PrimaryButton.vue'
 import AboutImageBlock from 'pages/mainPage/modules/about/components/aboutImageBlock/AboutImageBlock.vue'
-
 export default defineComponent({
   name: 'About',
   components: { AboutImageBlock, PrimaryButton },

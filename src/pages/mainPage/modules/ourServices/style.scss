@@ -1,0 +1,30 @@
+@import "src/css/templates";
+
+.our-services {
+  padding: 2.8rem 0;
+
+
+  &__header {
+    @extend %header;
+    margin-bottom: 3.5rem;
+  }
+
+  &__description {
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    margin-bottom: .3rem;
+  }
+
+  &__cards {
+    display: grid;
+    justify-content: center;
+    gap: 3.5rem;
+  }
+
+  &__more {
+    margin-bottom: 2.3rem;
+  }
+}

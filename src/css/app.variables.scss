@@ -15,15 +15,17 @@ $layout: 100px;
 $cBlackPrimary: #464646;
 $cBlackSecondary: #1D1D1D;
 $cWhite: #fff;
-$cBlack: #1D1D1D;
+$cBlack: #000000;
 $cGray: #EBEBF2;
 $cRed01: #FF8E8E;
 $cRed02: #F62424;
 $cRed03: #FF3737;
+$cRed04: #FF2D2D;
 $cBlue01: #377DFF;
 $cBlue02: #4485FF;
 $cLightBlue: #37DBFF;
-$cGreen: #39e8a5;
+$cGreen: #7CE761;
+$cYellow: #FFA800;
 
 /*   Form variables   */
 $fBorderColor: #E5E3EE;
@@ -45,4 +47,4 @@ $tabletBreakpoint: 768;
 $desktopBreakpoint: 1440;
 $wideDesktopBreakpoint: 1440;
 
-$transitionDefault:  .15s linear;
+$transitionDefault: .15s linear;

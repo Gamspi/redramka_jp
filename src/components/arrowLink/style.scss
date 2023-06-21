@@ -4,33 +4,51 @@
 .arrow-link {
   display: inline-flex;
   align-items: center;
-  gap: 1.6rem;
+  gap: 1rem;
 
   &__label {
     font-family: $Quicksand;
     font-weight: 700;
-    font-size: 2rem;
-    line-height: 3.4rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
     color: $cBlue01;
+    transition: color $transitionDefault;
+    letter-spacing: 0.01rem;
+
   }
 
   &__icon {
-    width: 2.4rem;
+    width: 2rem;
     height: 2.4rem;
-
+    transform: translateY(.1rem);
     path {
+      transition: stroke $transitionDefault;
       stroke: $cBlue01;
     }
   }
 
   @include hover {
-    &__label {
+    .arrow-link__label {
       color: $cLightBlue;
     }
-    &__icon {
+    .arrow-link__icon {
       path {
         stroke: $cLightBlue;
       }
+    }
+  }
+  @include minMediaDesktop {
+    gap: 1.6rem;
+    &__label {
+      font-family: $Quicksand;
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 3.4rem;
+      color: $cBlue01;
+      transition: color $transitionDefault;
+    }
+    &__icon {
+      width: 2.4rem;
     }
   }
 }

@@ -40,7 +40,7 @@ import MainBlock from 'pages/mainPage/modules/mainBlock/MainBlock.vue'
 import Ball from 'components/ball/Ball.vue'
 import './style.scss'
 import About from 'pages/mainPage/modules/about/About.vue'
-import OurServices from 'pages/mainPage/modules/outServices/OutServices.vue'
+import OurServices from 'pages/mainPage/modules/ourServices/OurServices.vue'
 
 export default defineComponent(
   {

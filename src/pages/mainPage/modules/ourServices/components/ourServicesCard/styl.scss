@@ -11,9 +11,10 @@
   border-radius: 3rem;
   transition: box-shadow $transitionDefault;
   background: $cWhite;
-  padding: 3.5rem 7.4rem 6rem;
+  padding: 3.5rem 7.4rem 5.7rem ;
 
   &__circle {
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;

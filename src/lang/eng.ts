@@ -26,5 +26,11 @@ export const engLocal = {
     title: 'Perfect and Fast Movement',
     description: 'We move with make a Creative Strategy for help your business goal, we help to improve your income by a services we have. make your content look interesting and make people look for your business',
     moreButton: 'Read more'
+  },
+  portfolio: {
+    supTitle: 'Our Portfolio',
+    title: 'What do we do',
+    description: 'all projects that we have already done , proven can help to use more comfortable, then can used by client from our business',
+    seeAllButton: 'See All Portfolio'
   }
 }

@@ -1,0 +1,23 @@
+.portfolio {
+  padding: 4.9rem 0;
+
+  &__sup-title, &__title, &__description {
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 3.4rem;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.01em;
+  }
+
+  &__body {
+    margin-bottom: 3.5rem;
+  }
+}

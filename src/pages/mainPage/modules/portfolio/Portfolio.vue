@@ -1,14 +1,47 @@
 <template>
-  <div class="portfolio" />
+  <section class="portfolio">
+    <div class="portfolio__container container">
+      <div class="portfolio__header">
+        <h3 class="portfolio__sup-title sup-title">
+          {{ lang.portfolio.supTitle }}
+        </h3>
+        <h2 class="portfolio__title title">
+          {{ lang.portfolio.title }}
+        </h2>
+        <p class="portfolio__description">
+          {{ lang.portfolio.description }}
+        </p>
+      </div>
+      <div class="portfolio__body">
+        <PortfolioCard />
+      </div>
+      <div class="portfolio__footer">
+        <PrimaryButton
+          bordered
+        >
+          {{ lang.portfolio.seeAllButton }}
+        </PrimaryButton>
+      </div>
+    </div>
+  </section>
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 import { defineComponent } from 'vue'
+import { useLang } from 'src/hooks/useLang'
+import './style.scss'
+import PortfolioCard from './components/portfolioCard/PortfolioCard.vue'
+import PrimaryButton from 'components/primaryButton/PrimaryButton.vue'
 
 export default defineComponent({
   name: 'Portfolio',
+  components: {
+    PrimaryButton,
+    PortfolioCard
+  },
   setup () {
-    return {}
+    const lang = useLang()
+    return { lang }
   }
 })
 </script>

@@ -26,5 +26,11 @@ export const ruLocal = {
     title: 'Perfect and Fast Movement',
     description: 'We move with make a Creative Strategy for help your business goal, we help to improve your income by a services we have. make your content look interesting and make people look for your business',
     moreButton: 'Читать далее'
+  },
+  portfolio: {
+    supTitle: 'Наше портфолио',
+    title: 'Что мы делаем',
+    description: 'все проекты, которые мы уже сделали, доказали, что могут помочь использовать их более комфортно, чем может использовать клиент из нашего бизнеса',
+    seeAllButton: 'См. все портфолио'
   }
 }

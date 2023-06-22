@@ -31,6 +31,7 @@
     <MainBlock />
     <About />
     <OurServices />
+    <Portfolio />
   </div>
 </template>
 
@@ -41,11 +42,13 @@ import Ball from 'components/ball/Ball.vue'
 import './style.scss'
 import About from 'pages/mainPage/modules/about/About.vue'
 import OurServices from 'pages/mainPage/modules/ourServices/OurServices.vue'
+import Portfolio from 'pages/mainPage/modules/portfolio/Portfolio.vue'
 
 export default defineComponent(
   {
     name: 'MainPageLayout',
     components: {
+      Portfolio,
       OurServices,
       About,
       Ball,

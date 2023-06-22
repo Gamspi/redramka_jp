@@ -13,7 +13,14 @@
         </p>
       </div>
       <div class="portfolio__body">
-        <PortfolioCard />
+        <PortfolioCard
+          v-for="item in portfolioCards"
+          :key="item.label"
+          :label="item.label"
+          :image="item.image"
+          :src="item.src"
+          :is-small="item.isSmall"
+        />
       </div>
       <div class="portfolio__footer">
         <PrimaryButton
@@ -32,6 +39,7 @@ import { useLang } from 'src/hooks/useLang'
 import './style.scss'
 import PortfolioCard from './components/portfolioCard/PortfolioCard.vue'
 import PrimaryButton from 'components/primaryButton/PrimaryButton.vue'
+import { portfolioCards } from 'pages/mainPage/modules/portfolio/constants/cards'
 
 export default defineComponent({
   name: 'Portfolio',
@@ -41,7 +49,10 @@ export default defineComponent({
   },
   setup () {
     const lang = useLang()
-    return { lang }
+    return {
+      lang,
+      portfolioCards
+    }
   }
 })
 </script>

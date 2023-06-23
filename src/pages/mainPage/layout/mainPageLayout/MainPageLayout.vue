@@ -32,6 +32,7 @@
     <About />
     <OurServices />
     <Portfolio />
+    <Testimonial />
   </div>
 </template>
 
@@ -43,11 +44,13 @@ import './style.scss'
 import About from 'pages/mainPage/modules/about/About.vue'
 import OurServices from 'pages/mainPage/modules/ourServices/OurServices.vue'
 import Portfolio from 'pages/mainPage/modules/portfolio/Portfolio.vue'
+import Testimonial from 'pages/mainPage/modules/testimonial/Testimonial.vue'
 
 export default defineComponent(
   {
     name: 'MainPageLayout',
     components: {
+      Testimonial,
       Portfolio,
       OurServices,
       About,

@@ -6,11 +6,19 @@ const useController = () => {
   const changeIsGeneralLoading = (val: boolean) => { store.commit('general/mutateIsGeneralLoading', val) }
 
   const IsGeneralLoading = computed(() => store.state.general.isGeneralLoading)
-  onMounted(() => {
-    setTimeout(() => {
+  const getReviews = async () => {
+    await store.dispatch('testimonial/getReviews')
+  }
+  const onMountedCallback = async () => {
+    const [browserLang] = (window.navigator.language || navigator.language).match(/[a-z]+/g) || ['']
+    store.commit('general/mutateIsGeneralLoading', browserLang)
+    try {
+      await getReviews()
+    } finally {
       changeIsGeneralLoading(false)
-    }, 1000)
-  })
+    }
+  }
+  onMounted((onMountedCallback))
   return {
     IsGeneralLoading
   }

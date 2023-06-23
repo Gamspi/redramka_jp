@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "reviews": [
+  "data": [
     {
       "id": "dsds0021511",
       "ru": {
@@ -8,11 +8,11 @@
         "specialty": "Креативный директор",
         "text": "Крутые ребята, работать вместе очень комфортно. Сотрудничаем на протяжении нескольких лет."
       },
-      "en ": {
+      "en": {
         "name": "Angel Rose",
         "specialty": "Креативный директор",
         "text": "There are many variations passages of Lorem Ipsum majority some by words which don't look . "
-      }      
+      }
     },
     {
       "id": "ghfdgfdgfdg4545",
@@ -21,11 +21,11 @@
         "specialty": "Креативный директор",
         "text": "Крутые ребята, работать вместе очень комфортно. Сотрудничаем на протяжении нескольких лет."
       },
-      "en ": {
+      "en": {
         "name": "Angel Rose",
         "specialty": "Креативный директор",
         "text": "There are many variations passages of Lorem Ipsum majority some by words which don't look . "
-      }      
+      }
     },
     {
       "id": "4545rfervff",
@@ -34,11 +34,11 @@
         "specialty": "Креативный директор",
         "text": "Крутые ребята, работать вместе очень комфортно. Сотрудничаем на протяжении нескольких лет."
       },
-      "en ": {
+      "en": {
         "name": "Angel Rose",
         "specialty": "Креативный директор",
         "text": "There are many variations passages of Lorem Ipsum majority some by words which don't look . "
-      }      
+      }
     },
     {
       "id": "fdf454fddd",
@@ -47,11 +47,11 @@
         "specialty": "Креативный директор",
         "text": "Крутые ребята, работать вместе очень комфортно. Сотрудничаем на протяжении нескольких лет."
       },
-      "en ": {
+      "en": {
         "name": "Angel Rose",
         "specialty": "Креативный директор",
         "text": "There are many variations passages of Lorem Ipsum majority some by words which don't look . "
-      }      
+      }
     },
     {
       "id": "dsds0021511",
@@ -60,11 +60,11 @@
         "specialty": "Креативный директор",
         "text": "Крутые ребята, работать вместе очень комфортно. Сотрудничаем на протяжении нескольких лет."
       },
-      "en ": {
+      "en": {
         "name": "Angel Rose",
         "specialty": "Креативный директор",
         "text": "There are many variations passages of Lorem Ipsum majority some by words which don't look . "
-      }      
-    }            
+      }
+    }
   ]
 }

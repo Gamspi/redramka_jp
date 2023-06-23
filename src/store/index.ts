@@ -7,7 +7,9 @@ import {
 } from 'vuex'
 
 import general from './general'
+import testimonial from './testimonial'
 import { GeneralStateInterface } from './general/state'
+import { TestimonialStateInterface } from './testimonial/type'
 
 // import example from './module-example'
 // import { ExampleStateInterface } from './module-example/state';
@@ -26,6 +28,7 @@ export interface StateInterface {
   // example: ExampleStateInterface;
   // Declared as unknown to avoid linting issue. Best to strongly type as per the line above.
   general: GeneralStateInterface;
+  testimonial: TestimonialStateInterface;
 }
 
 // provide typings for `this.$store`
@@ -41,7 +44,8 @@ export const storeKey: InjectionKey<VuexStore<StateInterface>> = Symbol('vuex-ke
 export default store(function (/* { ssrContext } */) {
   const Store = createStore<StateInterface>({
     modules: {
-      general
+      general,
+      testimonial
     },
 
     // enable strict mode (adds overhead!)

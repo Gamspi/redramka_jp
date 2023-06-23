@@ -1,0 +1,12 @@
+@import "src/css/templates";
+.testimonial {
+  padding: 5.4rem 0;
+  &__header {
+    @extend %header;
+    margin-bottom: 3.5rem;
+  }
+  &__slide {
+    width: 100%;
+    flex-shrink: 0;
+  }
+}

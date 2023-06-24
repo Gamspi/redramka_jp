@@ -1,0 +1,47 @@
+.collaboration {
+  padding: 4.6rem 0;
+
+  &__images {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4.5rem;
+  }
+
+  &__img {
+    border-radius: 16px;
+
+    &:first-of-type {
+      align-self: flex-end;
+      width: 18rem;
+      height: 17.7rem;
+      margin-bottom: -9.9rem;
+    }
+
+    &:last-of-type {
+      width: 22.1rem;
+      height: 19.6rem;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0.0084rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &__description {
+    font-size: 1.4rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.014rem;
+    text-align: center;
+    margin-bottom: 2.4rem;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+  }
+}

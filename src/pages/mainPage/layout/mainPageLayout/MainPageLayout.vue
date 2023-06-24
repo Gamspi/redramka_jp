@@ -33,6 +33,7 @@
     <OurServices />
     <Portfolio />
     <Testimonial />
+    <Collaboration />
   </div>
 </template>
 
@@ -45,11 +46,13 @@ import About from 'pages/mainPage/modules/about/About.vue'
 import OurServices from 'pages/mainPage/modules/ourServices/OurServices.vue'
 import Portfolio from 'pages/mainPage/modules/portfolio/Portfolio.vue'
 import Testimonial from 'pages/mainPage/modules/testimonial/Testimonial.vue'
+import Collaboration from 'pages/mainPage/modules/сollaboration/Collaboration.vue'
 
 export default defineComponent(
   {
     name: 'MainPageLayout',
     components: {
+      Collaboration,
       Testimonial,
       Portfolio,
       OurServices,

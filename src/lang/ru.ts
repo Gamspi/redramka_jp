@@ -37,5 +37,10 @@ export const ruLocal = {
     supTitle: 'Наше портфолио',
     title: 'Что мы делаем',
     seeAllButton: 'См. все портфолио'
+  },
+  collaboration: {
+    title: 'People Talk about us',
+    description: 'People Talk about us',
+    button: 'См. все портфолио'
   }
 }

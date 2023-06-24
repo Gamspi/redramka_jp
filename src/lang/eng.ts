@@ -37,5 +37,10 @@ export const engLocal = {
     supTitle: 'Testimonial',
     title: 'People Talk about us',
     seeAllButton: 'См. все портфолио'
+  },
+  collaboration: {
+    title: 'Interesting Collaboration With Us?',
+    description: 'Help you to reach your business goal',
+    button: 'Get Started'
   }
 }

@@ -8,6 +8,9 @@ const mutation: MutationTree<GeneralStateInterface> = {
   },
   mutateLang (state: GeneralStateInterface, payload: LangEnum): void {
     state.lang = payload
+  },
+  mutateIsShowPopupContactUs (state: GeneralStateInterface, payload: boolean): void {
+    state.isShowPopupContactUs = payload
   }
 
 }

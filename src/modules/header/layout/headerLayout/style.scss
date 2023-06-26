@@ -1,9 +1,33 @@
+@import "src/css/app.variables";
+
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: 4rem 2.5rem;
+
+  z-index: 20;
+
+  & + * {
+    margin-top: $mobileHeaderHeight;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 4rem 2.5rem;
+    background-color: $cWhite;
+  }
+
+  &__mobile-menu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    max-height: calc(100vh - 11.3rem);
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
   }
 }

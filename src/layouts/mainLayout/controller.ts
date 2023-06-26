@@ -1,7 +1,7 @@
 import { computed, onMounted } from 'vue'
 import { useStore } from 'src/store'
 
-const useController = () => {
+export const useController = () => {
   const store = useStore()
   const changeIsGeneralLoading = (val: boolean) => { store.commit('general/mutateIsGeneralLoading', val) }
 
@@ -23,5 +23,3 @@ const useController = () => {
     IsGeneralLoading
   }
 }
-
-export default useController

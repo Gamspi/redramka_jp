@@ -1,15 +1,21 @@
 <template>
   <header class="header">
     <div class="header__container">
-      <router-link
-        class="header__logo"
-        to="/"
-      >
+      <div class="header__logo">
         <Logo />
-      </router-link>
-      <div class="header__burger">
-        <Burger />
       </div>
+      <div class="header__burger">
+        <Burger
+          :is-active="isShowMobileMenu"
+          @click="handelBurger"
+        />
+      </div>
+    </div>
+    <div class="header__mobile-menu">
+      <MobileMenu
+        :is-show="isShowMobileMenu"
+        @close="handelBurger"
+      />
     </div>
   </header>
 </template>
@@ -19,15 +25,18 @@ import { defineComponent } from 'vue'
 import Logo from 'components/logo/Logo.vue'
 import Burger from 'src/modules/header/components/burger/Burger.vue'
 import './style.scss'
+import MobileMenu from 'src/modules/header/components/mobileMenu/MobileMenu.vue'
+import { useController } from './controller'
 
 export default defineComponent({
   name: 'HeaderLayout',
   components: {
+    MobileMenu,
     Burger,
     Logo
   },
   setup () {
-    return {}
+    return useController()
   }
 })
 </script>

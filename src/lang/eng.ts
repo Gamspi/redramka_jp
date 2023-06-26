@@ -42,5 +42,16 @@ export const engLocal = {
     title: 'Interesting Collaboration With Us?',
     description: 'Help you to reach your business goal',
     button: 'Get Started'
+  },
+  contactUsPopup: {
+    title: 'Send us a message',
+    description: 'We move with make a Creative Strategy for help your business goal',
+    fields: {
+      name: 'Your name',
+      email: 'Email',
+      message: 'Your Message',
+      file: 'Attach file'
+    },
+    sendButton: 'Send message'
   }
 }

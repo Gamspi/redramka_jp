@@ -19,7 +19,7 @@
 
 import { defineComponent } from 'vue'
 
-import useController from './controller'
+import { useController } from './controller'
 import MainLoader from './components/mainLoader/MainLoader.vue'
 import Header from 'src/modules/header/Header.vue'
 

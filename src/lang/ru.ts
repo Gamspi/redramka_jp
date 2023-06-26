@@ -42,5 +42,16 @@ export const ruLocal = {
     title: 'People Talk about us',
     description: 'People Talk about us',
     button: 'См. все портфолио'
+  },
+  contactUsPopup: {
+    title: 'Send us a message',
+    description: 'We move with make a Creative Strategy for help your business goal',
+    fields: {
+      name: 'Your name',
+      email: 'Email',
+      message: 'Your Message',
+      file: 'Attach file'
+    },
+    sendButton: 'Send message'
   }
 }

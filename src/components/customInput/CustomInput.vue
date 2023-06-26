@@ -3,16 +3,25 @@
     :class="['custom-input', {
       'custom-input--fill': modelValue || defaultValue,
       'custom-input--error': isError,
+      'custom-input--text-area': isArea,
     }]"
   >
     <div class="custom-input__body">
       <input
+        v-if="!isArea"
         :id="inputId"
         :type="type"
         :value="modelValue || defaultValue"
         class="custom-input__value"
         @input="handelChangeModelValue"
       >
+      <textarea
+        v-else
+        :id="inputId"
+        :value="modelValue || defaultValue"
+        class="custom-input__value"
+        @input="handelChangeModelValue"
+      />
       <label
         v-if="placeholder"
         :for="inputId"
@@ -55,6 +64,10 @@ export default defineComponent({
       default: ''
     },
     isError: {
+      type: Boolean,
+      default: false
+    },
+    isArea: {
       type: Boolean,
       default: false
     }

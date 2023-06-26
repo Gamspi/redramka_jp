@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="contact-us-popup-form__field-list contact-us-popup-form__field-list_file">
-      <FilePicker />
+      <FilePicker :label="lang.contactUsPopup.fields.file" />
     </div>
     <div class="contact-us-popup-form__button">
       <PrimaryButton>

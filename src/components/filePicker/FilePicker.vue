@@ -2,7 +2,7 @@
   <label
     class="file-picker"
   >
-    <span class="file-picker__label"> label</span>
+    <span class="file-picker__label"> {{ label }}</span>
     <input
       type="file"
       class="file-picker__input"
@@ -16,8 +16,11 @@ import './style.scss'
 
 export default defineComponent({
   name: 'FilePicker',
-  setup () {
-    return {}
+  props: {
+    label: {
+      type: String,
+      default: ''
+    }
   }
 })
 </script>

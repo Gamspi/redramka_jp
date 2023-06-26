@@ -1,6 +1,6 @@
 <template>
   <router-link
-    class="logo"
+    :class="['logo', {'logo--footer': isFooter}]"
     :to="link"
   >
     <img
@@ -29,6 +29,10 @@ export default defineComponent({
     link: {
       type: String,
       default: '/'
+    },
+    isFooter: {
+      type: Boolean,
+      default: false
     }
   }
 })

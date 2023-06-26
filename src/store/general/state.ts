@@ -8,8 +8,7 @@ export interface GeneralStateInterface {
 
 const state: GeneralStateInterface = {
   isGeneralLoading: true,
-  lang: LangEnum.ENG
-  isGeneralLoading: true,
+  lang: LangEnum.ENG,
   isShowPopupContactUs: false
 }
 

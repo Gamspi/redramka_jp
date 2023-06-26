@@ -7,8 +7,22 @@
   width: 100vw;
   height: 100vh;
   z-index: 20;
-  background-color: $cWhite;
-  padding: 4.4rem 0;
+  background-color: $cWhite1;
+  padding: 4.4rem 0 0;
+  overflow: hidden;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 100%;
+  }
+
+  &__content {
+    overflow-y: auto;
+    padding: 0 2.5rem 4.4rem;
+    margin: 0 -2.5rem;
+  }
 
   &__header {
     display: flex;
@@ -44,5 +58,6 @@
     background-image: url("src/assets/icons/close.svg");
     background-size: cover;
     margin-bottom: 2.4rem;
+    flex-shrink: 0;
   }
 }

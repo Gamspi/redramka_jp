@@ -26,6 +26,7 @@
             v-for="item in LangEnum"
             :key="item"
             :class="['mobile-menu__button-lang', {'_active': currentLang === item}]"
+            @click="()=>handelChangeLang(item)"
           >
             {{ item }}
           </button>

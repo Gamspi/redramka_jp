@@ -5,7 +5,7 @@
   display: flex;
   gap: 1rem;
   justify-content: center;
-  color: $cWhite;
+  color: $cWhite1;
   background: $cBlue01;
   padding: 1rem 3.5rem;
   border-radius: 2.4rem;
@@ -24,7 +24,7 @@
     box-shadow: 0 .4rem .8rem rgba($cBlue01, 0.5);
 
     path {
-      stroke: $cWhite;
+      stroke: $cWhite1;
     }
 
     @include hover {

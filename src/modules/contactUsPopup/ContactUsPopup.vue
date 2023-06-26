@@ -8,20 +8,22 @@
         class="contact-us-popup"
       >
         <div class="contact-us-popup__container container">
-          <div class="contact-us-popup__header">
-            <button
-              class="contact-us-popup__close"
-              @click="handelCloseBlock"
-            />
-            <h2 class="contact-us-popup__title">
-              {{ lang.contactUsPopup.title }}
-            </h2>
-            <p class="contact-us-popup__description">
-              {{ lang.contactUsPopup.description }}
-            </p>
-          </div>
-          <div class="contact-us-popup__body">
-            <ContactUsPopupForm />
+          <button
+            class="contact-us-popup__close"
+            @click="handelCloseBlock"
+          />
+          <div class="contact-us-popup__content">
+            <div class="contact-us-popup__header">
+              <h2 class="contact-us-popup__title">
+                {{ lang.contactUsPopup.title }}
+              </h2>
+              <p class="contact-us-popup__description">
+                {{ lang.contactUsPopup.description }}
+              </p>
+            </div>
+            <div class="contact-us-popup__body">
+              <ContactUsPopupForm />
+            </div>
           </div>
         </div>
       </div>
@@ -29,7 +31,7 @@
   </Teleport>
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 import { defineComponent } from 'vue'
 import './style.scss'
 import { useController } from './controller'

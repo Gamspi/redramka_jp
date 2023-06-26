@@ -11,6 +11,7 @@
           :key="Component.name"
         />
       </router-view>
+      <Footer />
     </q-page-container>
   </q-layout>
 </template>
@@ -22,10 +23,11 @@ import { defineComponent } from 'vue'
 import { useController } from './controller'
 import MainLoader from './components/mainLoader/MainLoader.vue'
 import Header from 'src/modules/header/Header.vue'
+import Footer from 'src/modules/footer/Footer.vue'
 
 export default defineComponent({
   name: 'MainLayout',
-  components: { Header, MainLoader },
+  components: { Footer, Header, MainLoader },
   setup () {
     const {
       IsGeneralLoading

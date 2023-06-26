@@ -1,17 +1,12 @@
-import { ref, watch } from 'vue'
+import { ref } from 'vue'
+import { useBlockBody } from 'src/hooks/useBlockBody'
 
 export const useController = () => {
   const isShowMobileMenu = ref(false)
   const handelBurger = () => {
     isShowMobileMenu.value = !isShowMobileMenu.value
   }
-  watch(isShowMobileMenu, (value) => {
-    if (value) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = ''
-    }
-  })
+  useBlockBody(isShowMobileMenu, 'mobile-menu')
   return {
     isShowMobileMenu,
     handelBurger

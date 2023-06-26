@@ -16,6 +16,10 @@ html body {
   overflow-y: auto;
   user-select: none;
   min-width: $minContentWidth;
+
+  &[class*='block'] {
+    overflow: hidden;
+  }
 }
 
 button, a {

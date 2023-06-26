@@ -1,0 +1,51 @@
+@import "src/css/app.variables";
+
+.mobile-menu {
+  padding: 2.1rem 0 4rem;
+  background-color: $cWhite;
+  flex-grow: 1;
+  flex-basis: 100vh;
+  overflow-y: auto;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__item, &__button-lang {
+    color: $cBlackSecondary;
+    font-size: 1.8rem;
+    font-family: $Quicksand;
+    line-height: 2.4rem;
+    letter-spacing: 0.018rem;
+    text-transform: capitalize;
+
+    ._active, &._active {
+      font-weight: 700;
+    }
+  }
+
+  &__button-lang {
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: grid;
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+  }
+
+  &__lang {
+    display: flex;
+    gap: 1.6rem;
+    margin-bottom: 11.5rem;
+  }
+
+  &__contact-us {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    margin-bottom: 5rem;
+  }
+}

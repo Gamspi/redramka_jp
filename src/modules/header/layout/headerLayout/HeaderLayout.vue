@@ -8,8 +8,16 @@
         <Logo />
       </router-link>
       <div class="header__burger">
-        <Burger />
+        <Burger
+          :is-active="isShowMobileMenu"
+          @click="handelBurger"
+        />
       </div>
+    </div>
+    <div class="header__mobile-menu">
+      <MobileMenu
+        :is-show="isShowMobileMenu"
+      />
     </div>
   </header>
 </template>
@@ -19,15 +27,18 @@ import { defineComponent } from 'vue'
 import Logo from 'components/logo/Logo.vue'
 import Burger from 'src/modules/header/components/burger/Burger.vue'
 import './style.scss'
+import MobileMenu from 'src/modules/header/components/mobileMenu/MobileMenu.vue'
+import { useController } from './controller'
 
 export default defineComponent({
   name: 'HeaderLayout',
   components: {
+    MobileMenu,
     Burger,
     Logo
   },
   setup () {
-    return {}
+    return useController()
   }
 })
 </script>

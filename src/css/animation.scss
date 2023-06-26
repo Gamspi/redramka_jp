@@ -81,3 +81,27 @@
     @include randomAnimation;
   }
 }
+
+.mobile-menu-transition {
+  &-enter-active,
+  &-leave-active {
+    transition: transform .5s ease;
+  }
+
+  &-enter-from,
+  &-leave-to {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.burger-icon-transition {
+  &-enter-active,
+  &-leave-active {
+    transition: transform .5s ease;
+  }
+
+  &-enter-from,
+  &-leave-to {
+    transform: scale(0, 0);
+  }
+}

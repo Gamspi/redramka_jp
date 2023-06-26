@@ -61,9 +61,10 @@
 </template>
 
 <script lang='ts'>
-import { defineComponent, onMounted, ref } from 'vue'
+import { defineComponent } from 'vue'
 import './style.scss'
 import Ball from 'components/ball/Ball.vue'
+import { useController } from './controller'
 
 export default defineComponent({
   name: 'MainLoader',
@@ -75,16 +76,7 @@ export default defineComponent({
     }
   },
   setup () {
-    const isShowComponent = ref(true)
-    const TIME_ANIMATIONS = 5000
-    onMounted(() => {
-      setTimeout(() => {
-        isShowComponent.value = false
-      }, TIME_ANIMATIONS)
-    })
-    return {
-      isShowComponent
-    }
+    return useController()
   }
 })
 </script>

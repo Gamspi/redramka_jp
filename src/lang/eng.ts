@@ -53,5 +53,8 @@ export const engLocal = {
       file: 'Attach file'
     },
     sendButton: 'Send message'
+  },
+  common: {
+    filePicker: 'Attach file'
   }
 }

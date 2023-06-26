@@ -2,10 +2,18 @@
 
 .testimonial-item {
   background-color: $cWhite1;
-  border-radius: 20px;
-  box-shadow: 0px 8px 24px 0px rgba($cBlack, 0.05);
+  border-radius: 2rem;
+  box-shadow: 0 .8rem 2.4rem 0 rgba($cBlack, 0.05);
   padding: 4rem;
   width: 100%;
+
+  &__avatar {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
   &__header {
     display: flex;
     align-items: center;
@@ -15,14 +23,14 @@
 
   &__name {
     color: $cBlue01;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 600;
-    letter-spacing: 0.18px;
+    letter-spacing: .018rem;
   }
 
   &__specialty {
-    font-size: 11px;
-    letter-spacing: 0.11px;
+    font-size: 1.1rem;
+    letter-spacing: .011rem;
     opacity: 0.5;
   }
 
@@ -31,11 +39,12 @@
     flex-direction: column;
     gap: .7rem;
   }
+
   &__quote {
-    font-size: 14px;
+    font-size: 1.4rem;
     font-family: $Quicksand;
-    line-height: 24px;
-    letter-spacing: 0.14px;
-    opacity: 0.800000011920929;
+    line-height: 2.4rem;
+    letter-spacing: .014rem;
+    opacity: 0.8;
   }
 }

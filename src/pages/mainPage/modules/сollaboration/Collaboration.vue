@@ -21,7 +21,7 @@
           {{ lang.collaboration.description }}
         </p>
         <div class="collaboration__button">
-          <PrimaryButton>
+          <PrimaryButton @click="handelClickGetStarted">
             {{ lang.collaboration.button }}
           </PrimaryButton>
         </div>
@@ -37,16 +37,19 @@ import imag2 from 'assets/images/collaboration/collaboration001.png'
 import imag1 from 'assets/images/collaboration/collaboration002.png'
 import { useLang } from 'src/hooks/useLang'
 import './style.scss'
+import { useController } from './controller'
 
 export default defineComponent({
   name: 'Collaboration',
   components: { PrimaryButton },
   setup () {
     const lang = useLang()
+    const controller = useController()
     return {
       lang,
       imag1,
-      imag2
+      imag2,
+      ...controller
     }
   }
 })

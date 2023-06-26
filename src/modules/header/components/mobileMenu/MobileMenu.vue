@@ -36,7 +36,7 @@
             bordered
             @click="handelShowContactUsPopup"
           >
-            contact-us
+            Contact us
           </PrimaryButton>
         </div>
         <div class="mobile-menu__social">

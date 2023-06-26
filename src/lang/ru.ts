@@ -53,5 +53,8 @@ export const ruLocal = {
       file: 'Attach file'
     },
     sendButton: 'Send message'
+  },
+  common: {
+    filePicker: 'Attach file'
   }
 }

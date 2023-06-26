@@ -6,6 +6,7 @@ export const useController = () => {
   const handelBurger = () => {
     isShowMobileMenu.value = !isShowMobileMenu.value
   }
+
   useBlockBody(isShowMobileMenu, 'mobile-menu')
   return {
     isShowMobileMenu,

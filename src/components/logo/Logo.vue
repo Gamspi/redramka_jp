@@ -1,5 +1,8 @@
 <template>
-  <div class="logo">
+  <router-link
+    class="logo"
+    :to="link"
+  >
     <img
       src="../../assets/icons/mainLogo.svg"
       alt="main logo"
@@ -13,16 +16,20 @@
         Creative
       </h5>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script>
 import { defineComponent } from 'vue'
 import './style.scss'
+
 export default defineComponent({
   name: 'Logo',
-  setup () {
-    return {}
+  props: {
+    link: {
+      type: String,
+      default: '/'
+    }
   }
 })
 </script>

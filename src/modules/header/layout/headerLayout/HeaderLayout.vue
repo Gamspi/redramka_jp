@@ -1,12 +1,9 @@
 <template>
   <header class="header">
     <div class="header__container">
-      <router-link
-        class="header__logo"
-        to="/"
-      >
+      <div class="header__logo">
         <Logo />
-      </router-link>
+      </div>
       <div class="header__burger">
         <Burger
           :is-active="isShowMobileMenu"
@@ -17,6 +14,7 @@
     <div class="header__mobile-menu">
       <MobileMenu
         :is-show="isShowMobileMenu"
+        @close="handelBurger"
       />
     </div>
   </header>

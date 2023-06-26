@@ -32,5 +32,16 @@ export const ruLocal = {
     title: 'Что мы делаем',
     description: 'все проекты, которые мы уже сделали, доказали, что могут помочь использовать их более комфортно, чем может использовать клиент из нашего бизнеса',
     seeAllButton: 'См. все портфолио'
+  },
+  contactUsPopup: {
+    title: 'Send us a message',
+    description: 'We move with make a Creative Strategy for help your business goal',
+    fields: {
+      name: 'Your name',
+      email: 'Email',
+      message: 'Your Message',
+      file: 'Attach file'
+    },
+    sendButton: 'Send message'
   }
 }

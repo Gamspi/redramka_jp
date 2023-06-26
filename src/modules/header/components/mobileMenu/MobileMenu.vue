@@ -33,6 +33,7 @@
         <div class="mobile-menu__contact-us">
           <PrimaryButton
             bordered
+            @click="handelShowContactUsPopup"
           >
             contact-us
           </PrimaryButton>
@@ -64,13 +65,13 @@ export default defineComponent({
       default: false
     }
   },
-  setup () {
-    const { currentLang } = useController()
+  setup (_, { emit }) {
+    const controller = useController({ emit })
     return {
       navMenu,
       LangEnum,
       socialList,
-      currentLang
+      ...controller
     }
   }
 })

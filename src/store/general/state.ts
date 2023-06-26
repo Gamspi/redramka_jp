@@ -1,9 +1,11 @@
 export interface GeneralStateInterface {
   isGeneralLoading: boolean;
+  isShowPopupContactUs: boolean;
 }
 
 const state: GeneralStateInterface = {
-  isGeneralLoading: true
+  isGeneralLoading: true,
+  isShowPopupContactUs: false
 }
 
 export default state

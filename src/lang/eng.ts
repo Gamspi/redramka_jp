@@ -32,5 +32,16 @@ export const engLocal = {
     title: 'What do we do',
     description: 'all projects that we have already done , proven can help to use more comfortable, then can used by client from our business',
     seeAllButton: 'See All Portfolio'
+  },
+  contactUsPopup: {
+    title: 'Send us a message',
+    description: 'We move with make a Creative Strategy for help your business goal',
+    fields: {
+      name: 'Your name',
+      email: 'Email',
+      message: 'Your Message',
+      file: 'Attach file'
+    },
+    sendButton: 'Send message'
   }
 }

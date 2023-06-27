@@ -21,9 +21,20 @@
     width: 2rem;
     height: 2.4rem;
     transform: translateY(.1rem);
+
     path {
       transition: stroke $transitionDefault;
       stroke: $cBlue01;
+    }
+  }
+
+  .theme-dark & {
+    &__label {
+      color: inherit;
+    }
+
+    path {
+      stroke: $cWhite2
     }
   }
 

@@ -33,6 +33,7 @@
     background-color: $cWhite1;
     border-radius: 2rem;
     padding: 1.9rem 2.5rem 1.9rem 2.7rem;
+    color: $cBlackSecondary;
   }
   &--footer &__title {
     font-size: 2rem;
@@ -42,5 +43,8 @@
   &--footer &__sub-title {
     font-size: 1.6rem;
     line-height: 2.4rem;
+  }
+  &--footer &__title,    &--footer &__sub-title {
+    color: $cBlackSecondary;
   }
 }

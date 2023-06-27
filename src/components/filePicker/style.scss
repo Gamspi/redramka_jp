@@ -1,4 +1,5 @@
 @import "src/css/app.variables";
+
 .file-picker {
   position: relative;
   width: fit-content;
@@ -6,13 +7,13 @@
   gap: .5rem;
 
 
-  &:before {
+  &__icon{
     width: 2.4rem;
     height: 2.4rem;
-    content: '';
     display: block;
-    background-image: url("src/assets/icons/attach.svg");
+    fill: $cBlue01;
   }
+
   &__label {
     color: $cBlue01;
     font-size: 1.6rem;
@@ -21,6 +22,7 @@
     line-height: 2.4rem;
     letter-spacing: 0.016rem;
   }
+
   &__input {
     position: absolute;
     left: 0;
@@ -28,5 +30,15 @@
     width: 100%;
     height: 100%;
     opacity: 0;
+  }
+
+  .theme-dark & {
+    &__label {
+      color: inherit;
+    }
+
+    &__icon{
+      fill: $cWhite2
+    }
   }
 }

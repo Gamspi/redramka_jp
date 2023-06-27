@@ -17,6 +17,11 @@ html body {
   user-select: none;
   min-width: $minContentWidth;
 
+  &.theme-dark {
+    color: $cWhite2;
+    background-color: $cBlack2;
+  }
+
   &[class*='block'] {
     overflow: hidden;
   }
@@ -32,6 +37,10 @@ button, a {
 h1, h2, h3, h4, h5, h6 {
   color: $cBlackSecondary;
   font-family: $Nunito;
+
+  .theme-dark & {
+    color: $cWhite2;
+  }
 }
 
 ul, ol {

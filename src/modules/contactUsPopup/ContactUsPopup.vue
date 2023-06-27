@@ -11,7 +11,27 @@
           <button
             class="contact-us-popup__close"
             @click="handelCloseBlock"
-          />
+          >
+            <svg
+              class="contact-us-popup__icon"
+              viewBox="0 0 30 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21.7279 18.7279L9 6"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M9.0001 18.7279L21.728 6"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
           <div class="contact-us-popup__content">
             <div class="contact-us-popup__header">
               <h2 class="contact-us-popup__title">

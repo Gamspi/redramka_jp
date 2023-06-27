@@ -58,4 +58,25 @@
     line-height: 2.4rem;
     padding: 1.2rem 5rem;
   }
+  .theme-dark & {
+    color: $cBlack2;
+    background: $cWhite2;
+    &--bordered {
+      color: inherit;
+      background: none;
+      border-color: $cWhite2;
+
+      path {
+        stroke: $cWhite2
+      }
+      @include hover {
+        color: $cLightBlue;
+        border: 1px solid $cLightBlue;
+
+        path {
+          stroke: $cLightBlue
+        }
+      }
+    }
+  }
 }

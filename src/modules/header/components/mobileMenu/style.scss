@@ -48,4 +48,10 @@
     flex-direction: column;
     margin-bottom: 5rem;
   }
+  .theme-dark & {
+    &__item, &__button-lang {
+      color: inherit;
+    }
+    background-color: $cBlack2;
+  }
 }

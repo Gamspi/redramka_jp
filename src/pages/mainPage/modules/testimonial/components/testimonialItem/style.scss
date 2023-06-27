@@ -3,9 +3,13 @@
 .testimonial-item {
   background-color: $cWhite1;
   border-radius: 2rem;
-  box-shadow: 0 .8rem 2.4rem 0 rgba($cBlack, 0.05);
+  box-shadow: 0 .8rem 2.4rem 0 rgba($cBlack1, 0.05);
   padding: 4rem;
   width: 100%;
+
+  .theme-dark & {
+    background-color: $cBlack3;
+  }
 
   &__avatar {
     width: 7rem;

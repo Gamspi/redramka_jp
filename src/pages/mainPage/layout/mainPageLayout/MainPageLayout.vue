@@ -1,5 +1,5 @@
 <template>
-  <div class="main-page">
+  <main class="main-page">
     <ContactUsPopup />
     <div class="main-page__balls">
       <div class="main-page__ball">
@@ -35,7 +35,7 @@
     <Portfolio />
     <Testimonial />
     <Collaboration />
-  </div>
+  </main>
 </template>
 
 <script>

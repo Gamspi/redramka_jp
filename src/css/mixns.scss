@@ -30,7 +30,7 @@
   }
   @for $i from 1 through 9 {
     #{$i}0% {
-      transform: translate3d(random(20)+rem, random(20)+rem, 0);
+      transform: translate3d((random(30)-15)+rem, (random(30)-15)+rem, 0);
     }
   }
   100% {

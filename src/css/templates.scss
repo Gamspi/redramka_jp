@@ -1,24 +1,23 @@
 %ballsPosition {
   position: absolute;
-
   &:first-child {
-    top: 38.5rem;
-    left: 7.9rem;
+    top: 35rem;
+    right: 25vw;
   }
 
   &:nth-child(2) {
-    bottom: 25.6rem;
-    right: 21.8rem;
+    top: 15rem;
+    left: 25vw;
   }
 
   &:nth-child(3) {
-    top: 13.7rem;
-    right: 15.6rem;
+    top: 35rem;
+    left: 25vw;
   }
 
   &:nth-child(4) {
-    bottom: 12rem;
-    left: 31.2rem;
+    top: 15rem;
+    right: 25vw;
   }
 }
 %header {

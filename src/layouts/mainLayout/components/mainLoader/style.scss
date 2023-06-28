@@ -82,4 +82,7 @@
     opacity: 0;
     animation: fade-in 1s linear 3.5s forwards;
   }
+  .theme-dark & {
+    background-color: $cBlack4;
+  }
 }

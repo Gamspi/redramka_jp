@@ -80,7 +80,14 @@
       color: $cRed03;
     }
   }
-
+  &._focus {
+    .custom-input__label {
+      color: $cBlackPrimary;
+    }
+    .custom-input__body {
+      border-color: $cBlackPrimary;
+    }
+  }
   .theme-dark & {
     &__label {
       background-color: $cBlack2;

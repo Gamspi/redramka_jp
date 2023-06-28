@@ -4,6 +4,7 @@
       'custom-input--fill': modelValue || defaultValue,
       'custom-input--error': isError,
       'custom-input--text-area': isArea,
+      '_focus': isFocused,
     }]"
   >
     <div class="custom-input__body">
@@ -14,6 +15,8 @@
         :value="modelValue || defaultValue"
         class="custom-input__value"
         @input="handelChangeModelValue"
+        @focus="handelFocus"
+        @blur="handelBlur"
       >
       <textarea
         v-else

@@ -4,9 +4,16 @@ import { ref } from 'vue'
 type Args = { emit: (event: string, ...args: any[]) => void }
 export const useController = ({ emit }: Args) => {
   const defaultValue = ref('')
+  const isFocused = ref(false)
   const inputId = getRandom(undefined, 'custom-input-')
+
+  const handelFocus = () => {
+    isFocused.value = true
+  }
+  const handelBlur = () => {
+    isFocused.value = false
+  }
   const handelChangeModelValue = (e: InputEvent) => {
-    console.log(e)
     const target = e.target as HTMLInputElement
     const value = target.value
     defaultValue.value = value
@@ -14,7 +21,10 @@ export const useController = ({ emit }: Args) => {
   }
   return {
     inputId,
+    isFocused,
     defaultValue,
+    handelBlur,
+    handelFocus,
     handelChangeModelValue
   }
 }

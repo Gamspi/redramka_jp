@@ -1,4 +1,4 @@
-import { computed, onMounted, ref } from 'vue'
+import { computed } from 'vue'
 import { useStore } from 'src/store'
 import { useSwiper } from 'src/hooks/useSwiper'
 

@@ -20,7 +20,7 @@ export default defineComponent({
       default: false
     },
     animationNumber: {
-      type: Number,
+      type: [Number, String],
       default: 1
     }
   },

@@ -1,5 +1,5 @@
 <template>
-  <div class="our-services">
+  <section class="our-services">
     <div class="our-services__container container">
       <div class="our-services__header">
         <h3 class="our-services__sup-title sup-title">
@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang='ts'>

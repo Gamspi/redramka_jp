@@ -1,5 +1,5 @@
 <template>
-  <div class="collaboration">
+  <section class="collaboration">
     <div class="collaboration__container container">
       <div class="collaboration__images">
         <img
@@ -27,7 +27,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts">

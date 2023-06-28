@@ -21,7 +21,7 @@ export const useController = () => {
   }
   const onMountedCallback = async () => {
     const [browserLang] = (window.navigator.language || navigator.language).match(/[a-z]+/g) || ['']
-    store.commit('general/mutateIsGeneralLoading', browserLang)
+    store.commit('general/mutateLang', browserLang)
     try {
       await getReviews()
     } finally {

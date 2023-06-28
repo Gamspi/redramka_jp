@@ -1,5 +1,7 @@
 <template>
-  <main class="main-page">
+  <main
+    class="main-page"
+  >
     <ContactUsPopup />
     <div class="main-page__balls">
       <div class="main-page__ball">
@@ -29,17 +31,23 @@
         />
       </div>
     </div>
-    <MainBlock />
-    <About />
-    <OurServices />
-    <Portfolio />
-    <Testimonial />
-    <Collaboration />
+    <div
+      ref="intersectionContainerRef"
+      class="main-page__container"
+    >
+      <MainBlock />
+      <About />
+      <OurServices />
+      <Portfolio />
+      <Testimonial />
+      <Collaboration />
+    </div>
   </main>
 </template>
 
 <script>
 import { defineComponent } from 'vue'
+import { useController } from './controller'
 import MainBlock from 'pages/mainPage/modules/mainBlock/MainBlock.vue'
 import Ball from 'components/ball/Ball.vue'
 import './style.scss'
@@ -64,7 +72,7 @@ export default defineComponent(
       MainBlock
     },
     setup () {
-      return {}
+      return useController()
     }
   }
 )

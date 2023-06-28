@@ -1,4 +1,5 @@
 @import "src/css/templates";
+@import "src/css/app.variables";
 
 .main-page {
   position: relative;
@@ -7,5 +8,12 @@
   &__ball {
     @extend %ballsPosition;
     z-index: -1;
+  }
+  section {
+    opacity: 1;
+    transition: opacity .6s ease-in;
+    &._hide {
+      opacity: 0;
+    }
   }
 }

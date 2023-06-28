@@ -1,5 +1,8 @@
 <template>
-  <section class="main-block">
+  <section
+    ref="intersectionTargetRef"
+    class="main-block"
+  >
     <div class="main-block__container">
       <div class="main-block__header">
         <h1 class="main-block__title">

@@ -6,15 +6,6 @@
   }
 }
 
-;
-
-@mixin minMediaTablet {
-  @media (min-width: $tabletBreakpoint + px) {
-    @content
-  }
-}
-
-;
 
 @mixin minMediaDesktop {
   @media (min-width: $desktopBreakpoint + px) {
@@ -22,15 +13,6 @@
   }
 }
 
-;
-
-@mixin minMediaMaxDesktop {
-  @media (min-width: $wideDesktopBreakpoint + px) {
-    @content
-  }
-}
-
-;
 
 @mixin fontFace($family, $weight) {
   @font-face {

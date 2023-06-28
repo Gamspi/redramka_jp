@@ -7,9 +7,7 @@ $Quicksand: Quicksand, sans-serif, $fontpostfix;
 $Nunito: Nunito, sans-serif, $fontpostfix;
 
 /*   Mobile variables   */
-$footer: 56px;
 $mobileHeaderHeight: 11.3rem;
-$layout: 100px;
 
 /*   Color variables   */
 $cBlackPrimary: #464646;
@@ -39,14 +37,9 @@ $fFieldHeight: 48px;
 $fFieldFontSize: 14px;
 $fFieldTextColor: #9A99A2;
 
-/*   Background variables   */
-$bgBlack: rgba(29, 29, 29, 0.84);
-$bgWhite: rgba(255, 255, 255, 0.5);
-$bgError: rgba(255, 58, 68, 0.1);
 
 /*  BREAKPOINTS */
 $mobileBreakpoint: 390;
-$tabletBreakpoint: 768;
 $desktopBreakpoint: 1440;
 $wideDesktopBreakpoint: 1440;
 

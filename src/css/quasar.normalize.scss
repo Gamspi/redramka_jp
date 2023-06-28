@@ -63,14 +63,9 @@ body {
 html {
   // 1rem === 10px
   font-size: calc(100vw / #{$mobileBreakpoint} * 10);
-  @include minMediaTablet {
-    font-size: calc(100vw / #{$tabletBreakpoint} * 10);
-  }
+
   @include minMediaDesktop {
     font-size: calc(100vw / #{$desktopBreakpoint} * 10);
-  }
-  @include minMediaMaxDesktop {
-    font-size: calc(100vw / #{$wideDesktopBreakpoint} * 10);
   }
 }
 

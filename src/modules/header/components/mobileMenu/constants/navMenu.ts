@@ -1,18 +1,32 @@
+import { LangEnum } from 'src/utils/enum/langEnum'
+
 export const navMenu = [
   {
     link: '/',
-    label: 'Home'
+    label: {
+      [LangEnum.ENG]: 'Home',
+      [LangEnum.RU]: 'Главная'
+    }
   },
   {
     link: '/about',
-    label: 'About'
+    label: {
+      [LangEnum.ENG]: 'About',
+      [LangEnum.RU]: 'О нас'
+    }
   },
   {
     link: '/services',
-    label: 'Services'
+    label: {
+      [LangEnum.ENG]: 'Services',
+      [LangEnum.RU]: 'Услуги'
+    }
   },
   {
     link: '/projects',
-    label: 'Projects'
+    label: {
+      [LangEnum.ENG]: 'Projects',
+      [LangEnum.RU]: 'Проекты'
+    }
   }
 ]

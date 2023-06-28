@@ -16,7 +16,7 @@
                 :to="item.link"
                 active-class="_active"
               >
-                {{ item.label }}
+                {{ item.label[currentLang] }}
               </router-link>
             </li>
           </ul>
@@ -36,7 +36,7 @@
             bordered
             @click="handelShowContactUsPopup"
           >
-            Contact us
+            {{ lang.common.contactUs }}
           </PrimaryButton>
         </div>
         <div class="mobile-menu__social">
@@ -56,6 +56,7 @@ import { useController } from './controller'
 import PrimaryButton from 'components/primaryButton/PrimaryButton.vue'
 import Social from 'components/social/Social.vue'
 import { socialList } from 'src/constants/socialList'
+import { useLang } from 'src/hooks/useLang'
 
 export default defineComponent({
   name: 'MobileMenu',
@@ -68,7 +69,9 @@ export default defineComponent({
   },
   setup (_, { emit }) {
     const controller = useController({ emit })
+    const lang = useLang()
     return {
+      lang,
       navMenu,
       LangEnum,
       socialList,

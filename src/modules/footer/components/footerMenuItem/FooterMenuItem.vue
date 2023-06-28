@@ -1,7 +1,7 @@
 <template>
   <div class="footer-menu-item">
     <h4 class="footer-menu-item__title">
-      {{ item.title }}
+      {{ item.title[$store.state.general.lang] }}
     </h4>
     <div class="footer-menu-item__body">
       <a
@@ -9,7 +9,7 @@
         :key="link.label + link.link"
         :href="link.link"
         class="footer-menu-item__link"
-      >{{ link.label }}</a>
+      >{{ link.label[$store.state.general.lang] }}</a>
     </div>
   </div>
 </template>

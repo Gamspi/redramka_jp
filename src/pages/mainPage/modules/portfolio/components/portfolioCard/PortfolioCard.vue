@@ -9,7 +9,7 @@
       class="portfolio-card__background"
     >
     <span class="portfolio-card__label">
-      {{ label }}
+      {{ label[$store.state.general.lang] }}
     </span>
   </a>
 </template>

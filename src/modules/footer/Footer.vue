@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="footer__copyright">
-      Copyright @ 2022 Agency Creative. All Right Reserved
+      {{ lang.footer.copy }}
     </div>
   </footer>
 </template>
@@ -29,6 +29,7 @@ import FooterMenuItem from 'src/modules/footer/components/footerMenuItem/FooterM
 import { footerMenu } from 'src/modules/footer/constants/footerMenu'
 import Social from 'components/social/Social.vue'
 import { socialList } from 'src/constants/socialList'
+import { useLang } from 'src/hooks/useLang'
 
 export default defineComponent({
   name: 'Footer',
@@ -38,7 +39,9 @@ export default defineComponent({
     Logo
   },
   setup () {
+    const lang = useLang()
     return {
+      lang,
       socialList,
       footerMenu
     }

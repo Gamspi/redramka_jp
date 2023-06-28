@@ -3,29 +3,42 @@ import monitor from 'src/assets/icons/services/monitor.svg'
 import tv from 'src/assets/icons/services/tv.svg'
 import settings from 'src/assets/icons/services/settings.svg'
 import penTool from 'src/assets/icons/services/penTool.svg'
+import { LangEnum } from 'src/utils/enum/langEnum'
 
 export const ourServicesCards = [
   {
     icon: monitor,
-    label: 'Social Media Management',
+    label: {
+      [LangEnum.ENG]: 'Social Media Management',
+      [LangEnum.RU]: 'Управление социальными сетями'
+    },
     to: '#',
     color: OurServicesCardEnum.BLUE
   },
   {
     icon: settings,
-    label: 'Search Engine Optimization',
+    label: {
+      [LangEnum.ENG]: 'Search Engine Optimization',
+      [LangEnum.RU]: 'Поисковая оптимизация'
+    },
     to: '#',
     color: OurServicesCardEnum.RED
   },
   {
     icon: penTool,
-    label: 'Design',
+    label: {
+      [LangEnum.ENG]: 'Design',
+      [LangEnum.RU]: 'Дизайн'
+    },
     to: '#',
     color: OurServicesCardEnum.GREEN
   },
   {
     icon: tv,
-    label: 'Ads',
+    label: {
+      [LangEnum.ENG]: 'Ads',
+      [LangEnum.RU]: 'Объявления'
+    },
     to: '#',
     color: OurServicesCardEnum.YELLOW
   }

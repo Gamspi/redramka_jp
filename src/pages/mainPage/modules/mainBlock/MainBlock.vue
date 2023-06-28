@@ -14,7 +14,7 @@
       </div>
 
       <div class="main-block__button">
-        <PrimaryButton>
+        <PrimaryButton @click="handelStartButtonClick">
           {{ local.mainBlock.button }}
         </PrimaryButton>
       </div>
@@ -33,13 +33,14 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { useLang } from 'src/hooks/useLang'
+import { useController } from './controller'
 import './style.scss'
 import PrimaryButton from 'components/primaryButton/PrimaryButton.vue'
-import MainBlockImage from 'pages/mainPage/modules/mainBlock/components/mainBlockImage/MainBlockImage.vue'
+import MainBlockImage from './components/mainBlockImage/MainBlockImage.vue'
 import MainBlockAchievement
-  from 'pages/mainPage/modules/mainBlock/components/mainBlockAchievement/MainBlockAchievement.vue'
-import MainBlockReview from 'pages/mainPage/modules/mainBlock/components/mainBlockReview/MainBlockReview.vue'
-import { useLang } from 'src/hooks/useLang'
+  from './components/mainBlockAchievement/MainBlockAchievement.vue'
+import MainBlockReview from './components/mainBlockReview/MainBlockReview.vue'
 
 export default defineComponent({
   name: 'MainBlock',
@@ -51,8 +52,10 @@ export default defineComponent({
   },
   setup () {
     const local = useLang()
+    const controller = useController()
     return {
-      local
+      local,
+      ...controller
     }
   }
 })

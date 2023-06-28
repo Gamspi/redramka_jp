@@ -22,7 +22,7 @@
       </div>
       <div class="about__buttons">
         <PrimaryButton href="#">
-          About Us
+          {{ lang.about.button }}
         </PrimaryButton>
         <PrimaryButton
           href="#"

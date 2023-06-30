@@ -2,9 +2,15 @@
 @import "src/css/app.variables";
 
 .main-page {
-  position: relative;
-  overflow: hidden;
 
+  overflow: hidden;
+  &__balls {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: -1;
+  }
   &__ball {
     @extend %ballsPosition;
     z-index: -1;

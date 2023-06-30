@@ -2,10 +2,10 @@
 
 .main-loader-enter-active,
 .main-loader-leave-active {
-  transition: opacity .5s ease .8s;
+  transition: opacity .5s ease .5s;
 
-  & * {
-    transition: opacity .5s ease;
+  .main-loader__container {
+    transition: transform 1s ease, opacity 1s ease;
   }
 }
 
@@ -13,10 +13,12 @@
 .main-loader-leave-to {
   opacity: 0;
 
-  & * {
+  .main-loader__container {
     opacity: 0;
+    transform: scale(0, 0);
   }
 }
+
 
 .fabe-height-enter-active,
 .fabe-height-leave-active {
@@ -39,46 +41,69 @@
   }
 }
 
-@keyframes main-loader-logo {
+@keyframes main-loader-description {
   0% {
+    max-width: 0;
     opacity: 0;
-  }
-  70% {
-    height: 34.33rem;
   }
   100% {
     opacity: 1;
-    height: 17.5rem;
+    max-width: 100%;
+  }
+}
+
+@keyframes main-loader-logo {
+  0% {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+  50% {
+
+    transform: scale(1.98, 1.98);
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 1;
   }
 }
 
 @keyframes main-loader-wrapper {
   0% {
     transform: translate3d(0, 0, 0);
+    grid-template-columns: auto  minmax(0, 0fr);
   }
   100% {
-    transform: translate3d(0, -4.4rem, 0);
+    transform: translate3d(0, -3.8rem, 0);
+    grid-template-columns: auto  minmax(0, 1fr);
   }
 }
 
-@keyframes main-loader-content {
+@keyframes main-loader-body-text {
   0% {
     opacity: 1;
-    max-width: 0;
-  }
-  20% {
-    opacity: 1;
-    max-width: 0;
+    transform: translate3d(-110%, 0, 0);
   }
   100% {
     opacity: 1;
-    max-width: 100vw;
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @for $i from 1 through 4 {
   @keyframes ball-#{$i} {
     @include randomAnimation;
+  }
+}
+
+
+@keyframes bolls-fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
   }
 }
 

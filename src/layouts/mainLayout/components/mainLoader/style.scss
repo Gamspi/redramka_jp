@@ -1,77 +1,80 @@
 @import "src/css/app.variables";
 @import "src/css/templates";
+@import "src/css/mixns";
 
 .main-loader {
-  position: fixed;
-  top: 0;
-  z-index: 100;
   background: $cWhite1;
+  position: fixed;
   height: 100%;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  &__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   &__logo {
     opacity: 0;
     object-fit: cover;
-    height: 34.33rem;
+    height: 10.1258rem;
     animation: main-loader-logo 1s linear forwards .3s;
   }
 
   &__title, &__sub-title {
-    padding-left: 3.8rem;
+    opacity: 0;
+    padding-left: 2.19rem;
+    font-family: $Quicksand;
+    animation: main-loader-body-text .5s linear forwards 1.3s;
   }
 
   &__title {
+    font-size: 4.0338rem;
+    font-style: normal;
     font-weight: 700;
-    font-size: 6.97rem;
-    line-height: 8.4rem;
-    margin-bottom: 1.4rem;
-    letter-spacing: 0.1rem;
+    line-height: 4.8405rem;
+    letter-spacing: 0.0403rem;
+    margin-bottom: .8rem;
   }
 
   &__sub-title {
+    font-size: 3.227rem;
     font-weight: 400;
-    font-size: 5.5771rem;
-    line-height: 7rem;
-    letter-spacing: 0.06rem;
+    line-height: normal;
+    letter-spacing: 0.0323rem;
   }
 
   &__body {
-    display: flex;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto  minmax(0, 0fr);
+    animation: main-loader-wrapper .6s linear forwards .7s;
   }
 
   &__content {
-    opacity: 0;
     overflow: hidden;
-    max-width: 0;
-    animation: main-loader-content 2s linear forwards 1.5s;
-  }
-
-  &__footer {
-    position: absolute;
-    left: 0;
-    top: 100%;
-    width: 100%;
-    opacity: 0;
-    padding-top: 4rem;
-    animation: fade-in 1s linear forwards 2.5s;
-  }
-
-  &__wrapper {
-    position: relative;
-    margin: 0 0 -1.4rem 0;
-    animation: main-loader-wrapper .3s linear forwards .99s;
   }
 
   &__description {
-    font-weight: 400;
-    font-size: 3.2rem;
-    line-height: 3.2rem;
-    text-align: end;
-    padding-right: 1.2rem;
-    letter-spacing: 0.03rem;
+    overflow: hidden;
+    position: absolute;
+    left: 2rem;
+    top: calc(100% + 2.5rem);
+    width: 100%;
+    opacity: 0;
+    font-weight: 300;
+    font-size: 1.8516rem;
+    line-height: 1.8516rem;
+    letter-spacing: 0.032rem;
+    white-space: nowrap;
+    animation: main-loader-description .5s linear 2.3s forwards;
   }
 
   &__ball {
@@ -79,10 +82,49 @@
   }
 
   &__balls {
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     opacity: 0;
-    animation: fade-in 1s linear 3.5s forwards;
+    animation: bolls-fade-in .5s linear 1.8s forwards;
   }
+
   .theme-dark & {
     background-color: $cBlack4;
+  }
+
+  @include minMediaDesktop {
+    &__title {
+      font-size: 6.97rem;
+      line-height: 8.4rem;
+      letter-spacing: 0.0697rem;
+      margin-bottom: 1.4rem;
+    }
+    &__sub-title {
+      font-weight: 400;
+      font-size: 5.5771rem;
+      line-height: 7rem;
+      letter-spacing: 0.0558rem;
+    }
+    &__description {
+      font-size: 3.2rem;
+      line-height: 3.2rem;
+      letter-spacing: 0.06rem;
+      left: 3.6rem;
+      top: calc(100% + 4rem);
+    }
+
+    &__title, &__sub-title {
+      padding-left: 3.8rem;
+    }
+    &__footer {
+      padding-top: 4rem;
+    }
+    &__logo {
+      height: 17.5rem;
+    }
   }
 }

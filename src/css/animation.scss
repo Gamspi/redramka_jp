@@ -2,7 +2,7 @@
 
 .main-loader-enter-active,
 .main-loader-leave-active {
-  transition: opacity .5s ease .5s;
+  transition: opacity .5s ease .8s;
 
   .main-loader__container {
     transition: transform 1s ease, opacity 1s ease;

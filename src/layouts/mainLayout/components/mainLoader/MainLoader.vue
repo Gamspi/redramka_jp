@@ -2,7 +2,7 @@
   <Teleport to="#main-loader">
     <Transition
       name="main-loader"
-      duration="1000"
+      duration="1300"
     >
       <div
         v-if="isShow || isShowComponent"

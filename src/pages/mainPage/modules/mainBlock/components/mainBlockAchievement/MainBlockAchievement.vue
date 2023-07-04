@@ -11,9 +11,8 @@
       </h6>
     </div>
     <div class="main-block-achievement__body">
-      <span class="main-block-achievement__count">800+</span>&nbsp;<span
-        class="main-block-achievement__status"
-      >{{ lang.mainBlock.achievement.status }}</span>
+      <span class="main-block-achievement__count">800+</span>
+      &nbsp;<span class="main-block-achievement__status">{{ lang.mainBlock.achievement.status }}</span>
     </div>
   </article>
 </template>

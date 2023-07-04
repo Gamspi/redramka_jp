@@ -8,9 +8,10 @@
         <h1 class="main-block__title">
           {{ local.mainBlock.title }}
         </h1>
-        <p class="main-block__description">
-          {{ local.mainBlock.description }}
-        </p>
+        <p
+          class="main-block__description"
+          v-html="local.mainBlock.description"
+        />
       </div>
 
       <div class="main-block__button">

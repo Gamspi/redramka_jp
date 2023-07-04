@@ -1,4 +1,5 @@
 @import "src/css/app.variables";
+@import "src/css/mixns";
 
 .main-block {
   padding: 2.9rem 0;
@@ -8,7 +9,6 @@
   }
 
   &__title, &__description {
-
     text-align: center;
     letter-spacing: 0.01em;
   }
@@ -54,5 +54,35 @@
     bottom: 0;
     right: .4rem;
     z-index: 1;
+  }
+  @include minMediaDesktop {
+    padding: 7.6rem 0;
+    &__title {
+      line-height: normal;
+      letter-spacing: 0.064rem;
+      font-size: 6.4rem;
+      margin-bottom: 2.3rem;
+    }
+    &__header {
+      width: 80rem;
+      margin: 0 auto 3.2rem;
+
+    }
+    &__description{
+      font-size: 2rem;
+      line-height: 150%;
+      letter-spacing: 0.02rem;
+    }
+    &__container {
+      padding: 0 22.88rem;
+    }
+    &__button {
+      margin-bottom: 8.8rem;
+    }
+
+    &__achievement {
+      top: 3.5rem;
+      left: 1.4rem;
+    }
   }
 }

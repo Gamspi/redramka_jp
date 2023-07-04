@@ -1,7 +1,7 @@
 export const mainPageEng = {
   mainBlock: {
     title: 'Make your dream business goal come true',
-    description: 'when you need us for improve your business, then come with us to help your business have reach it, you just sit and feel that goal.',
+    description: 'when you need us for improve your business,<br> then come with us to help your business have reach it, you just sit and feel that goal.',
     button: 'Start Project',
     review: {
       name: 'Bill Adams',
@@ -10,15 +10,15 @@ export const mainPageEng = {
     },
     achievement: {
       title: 'Great Project',
-      status: ''
+      status: 'Done'
     }
   },
   about: {
     supTitle: 'About Us',
     title: 'Our Teammate',
     descriptions: [
-      'We move with make a Creative Strategy for help your business goal, we help to improve your income by a services we have. make your content look interesting and make people look for your business2',
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu neque tempor at ut auctor maecenas,Lorem ipsum d'
+      'We move with make a Creative Strategy for help your business goal, we help to improve your income by a services we have. make your content look interesting and make people look for your business',
+      'We move with make a Creative Strategy for help your business goal, we help to improve your income by a services we have. make your content look interesting and make people look for your business'
     ],
     button: 'About Us'
   },

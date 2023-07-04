@@ -1,3 +1,5 @@
+@import "src/css/mixns";
+
 .about-image-block {
   position: relative;
   z-index: 1;
@@ -9,6 +11,10 @@
     z-index: 1;
     width: 10rem;
     height: 7.093rem;
+
+    &--desktop {
+      display: none;
+    }
   }
 
   &__content {
@@ -18,4 +24,25 @@
     height: 24.2rem;
   }
 
+  @include minMediaDesktop {
+    padding-top: 0;
+    &__content {
+      width: 56.5rem;
+      height: 40.2rem;
+    }
+
+    &__dots {
+      &:not( &--desktop) {
+        top: -1.9rem;
+        left: -2.9rem;
+      }
+
+      &--desktop {
+        display: block;
+        top: initial;
+        bottom: -.2rem;
+        right: -3.9rem;
+      }
+    }
+  }
 }

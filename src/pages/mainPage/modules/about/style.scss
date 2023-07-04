@@ -1,4 +1,5 @@
 @import "src/css/templates.scss";
+@import "src/css/mixns";
 
 .about {
   padding: 6.4rem 0;
@@ -28,5 +29,44 @@
     gap: 3.5rem;
     justify-content: center;
     margin-bottom: 4.9rem;
+  }
+
+  @include minMediaDesktop {
+    padding: 11.8rem 0;
+    &__container {
+      display: grid;
+      column-gap: 6.5rem;
+      grid-template-columns: 56.5rem 61rem;
+      grid-template-areas:
+        "header header"
+        "image body";
+    }
+    &__header {
+      grid-area: header;
+      margin-bottom: 3.8rem;
+    }
+    &__body {
+      grid-area: body;
+    }
+    &__image-block {
+      grid-area: image;
+    }
+    &__descriptions-list {
+      padding-top: 2.5rem;
+      margin-bottom: 2.4rem;
+    }
+    &__description {
+      font-size: 2rem;
+      line-height: 3.2rem;
+      letter-spacing: 0.02rem;
+
+      &:not(:last-child) {
+        margin-bottom: 2.4rem;
+      }
+    }
+    &__buttons {
+      justify-content: flex-start;
+      gap: 2.5rem;
+    }
   }
 }

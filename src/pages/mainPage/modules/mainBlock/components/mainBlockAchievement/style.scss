@@ -1,4 +1,5 @@
 @import "src/css/app.variables";
+@import "src/css/mixns";
 
 .main-block-achievement {
   background: $cWhite1;
@@ -22,6 +23,7 @@
     text-align: center;
     letter-spacing: 0.09rem;
     padding-bottom: .2rem;
+    text-transform: uppercase;
   }
 
   &__body {
@@ -29,7 +31,6 @@
     padding-left: .3rem;
     font-size: 1.2rem;
     line-height: 1.6rem;
-
     letter-spacing: 0.01em;
   }
 
@@ -41,7 +42,32 @@
     width: 1.6rem;
     height: 1.6rem;
   }
+
   .theme-dark & {
     background-color: $cBlack2;
+  }
+
+  @include minMediaDesktop {
+    padding:  1.6rem 2.4rem 1.6rem 2rem;
+    border-radius: 1.6rem;
+    &__star {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+    &__title {
+      font-size: 1.2rem;
+      line-height: normal;
+      letter-spacing: 0.012rem;
+    }
+
+    &__body {
+      font-size: 2.5rem;
+      line-height: normal;
+      letter-spacing: 0.024rem;
+      display: flex;
+    }
+    &__header {
+      margin-bottom: .6rem;
+    }
   }
 }

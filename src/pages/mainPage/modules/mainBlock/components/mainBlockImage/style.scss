@@ -1,3 +1,5 @@
+@import "src/css/mixns";
+
 .main-block-image {
   width: 100%;
   padding: 1.2rem 1.548rem 1.523rem .907rem;
@@ -21,9 +23,31 @@
     top: 0;
     right: -.1rem;
   }
-  &__dots-blue{
+
+  &__dots-blue {
     bottom: .5rem;
     left: -.1rem;
   }
 
+  @include minMediaDesktop {
+    display: flex;
+    &__content {
+      width: 73.9rem;
+      height: 50.1rem;
+      margin: auto;
+    }
+
+    &__dots-red {
+      top: initial;
+      right: initial;
+      bottom: -.3rem;
+      left: 29.4rem;
+    }
+
+    &__dots-blue {
+      bottom: initial;
+      top: -.9rem;
+      left: 25.8rem;
+    }
+  }
 }

@@ -57,6 +57,10 @@
     font-size: 1.6rem;
     line-height: 2.4rem;
     padding: 1.2rem 5rem;
+    & > svg {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
   }
   .theme-dark & {
     color: $cBlack2;

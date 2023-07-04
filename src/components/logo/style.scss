@@ -1,4 +1,5 @@
 @import "src/css/app.variables";
+@import "src/css/mixns";
 
 .logo {
   display: flex;
@@ -46,5 +47,21 @@
   }
   &--footer &__title,    &--footer &__sub-title {
     color: $cBlackSecondary;
+  }
+  @include minMediaDesktop {
+    &__icon {
+      width: 5.3229rem;
+      height: 4.9886rem;
+    }
+    &__title {
+      line-height: 2.4rem;
+      letter-spacing: 0.02rem;
+      font-size: 2rem;
+    }
+    &__sub-title {
+      font-size: 1.6rem;
+      line-height: normal;
+      letter-spacing: 0.016rem;
+    }
   }
 }

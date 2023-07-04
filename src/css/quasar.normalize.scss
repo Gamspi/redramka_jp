@@ -50,10 +50,12 @@ ul, ol {
 body {
   width: 100vw;
 }
+
 main {
   flex-grow: 1;
   flex-shrink: 0;
 }
+
 .q-page-container {
   width: 100vw;
   display: flex;
@@ -164,6 +166,12 @@ input, input:focus-visible, textarea, textarea:focus-visible {
 
 .container {
   padding: 0 2.5rem;
+  @include minMediaDesktop {
+    padding: 0 10rem;
+    max-width: 144rem;
+    margin: 0 auto;
+    width: 100%;
+  }
 }
 
 .sup-title {
@@ -174,6 +182,12 @@ input, input:focus-visible, textarea, textarea:focus-visible {
   letter-spacing: 0.01em;
   color: $cBlue01;
   margin-bottom: 1rem;
+  @include minMediaDesktop {
+    line-height: 2.4rem;
+    font-size: 2.4rem;
+    letter-spacing: 0.024rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .title {
@@ -182,4 +196,9 @@ input, input:focus-visible, textarea, textarea:focus-visible {
   font-size: 2.4rem;
   line-height: 3.3rem;
   letter-spacing: 0.003em;
+  @include minMediaDesktop {
+    font-size: 5.5rem;
+    line-height: normal;
+    letter-spacing: 0.0165rem;
+  }
 }

@@ -1,4 +1,5 @@
 @import "src/css/templates";
+@import "src/css/mixns";
 
 .our-services {
   padding: 2.8rem 0;
@@ -26,5 +27,27 @@
 
   &__more {
     margin-bottom: 2.3rem;
+  }
+
+  @include minMediaDesktop {
+    padding: 2.8rem 0;
+    &__header {
+      text-align: left;
+      align-items: flex-start;
+    }
+    &__description {
+      text-align: left;
+    }
+    &__container {
+      display: grid;
+      gap: 15.5rem;
+      grid-template-columns: 52rem 56.5rem;
+    }
+    &__cards {
+      display: grid;
+      column-gap: 4.1rem;
+      row-gap: 3.8rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }

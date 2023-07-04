@@ -1,4 +1,5 @@
 @import "src/css/app.variables";
+@import "src/css/mixns";
 
 .main-block-review {
   width: 8rem;
@@ -53,8 +54,40 @@
   .theme-dark & {
     background-color: $cBlack2;
     box-shadow: 0 .8rem 2.4rem 0 rgba($cBlack1, 0.15);
+
     &__name, &__body {
       color: inherit;
+    }
+  }
+
+  @include minMediaDesktop {
+    width: 16.6rem;
+    border-radius: 1.6rem;
+    padding: 2.7rem 2rem 2.5rem 2.2rem;
+
+    &__body {
+      font-size: 1rem;
+      line-height: normal;
+      letter-spacing: 0.01rem;
+    }
+    &__name {
+      font-size: 1rem;
+      line-height: normal;
+      letter-spacing: 0.01rem;
+    }
+    &__job-title {
+      font-size: 0.6rem;
+      line-height: normal;
+      letter-spacing: 0.006rem;
+    }
+
+    &__avatar {
+      width: 3.2rem;
+      height: 3.2rem;
+      margin-right: 1rem;
+    }
+    &__header {
+      margin-bottom: 1.2rem;
     }
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <Transition name="mobile-menu-transition">
     <aside
-      v-if="isShow"
+      v-show="isShow"
       class="mobile-menu"
     >
       <div class="mobile-menu__container container">
@@ -49,7 +49,7 @@
 
 <script lang='ts'>
 import { defineComponent } from 'vue'
-import { navMenu } from './constants/navMenu'
+import { navMenu } from '../../constants/navMenu'
 import './style.scss'
 import { LangEnum } from 'src/utils/enum/langEnum'
 import { useController } from './controller'

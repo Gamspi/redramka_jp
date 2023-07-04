@@ -33,15 +33,15 @@
 
     &__dots {
       &:not( &--desktop) {
-        top: -1.9rem;
-        left: -2.9rem;
+        top: -1.7rem;
+        left: -3.1rem;
       }
 
       &--desktop {
         display: block;
         top: initial;
-        bottom: -.2rem;
-        right: -3.9rem;
+        bottom: -.3rem;
+        right: -3.8rem;
       }
     }
   }

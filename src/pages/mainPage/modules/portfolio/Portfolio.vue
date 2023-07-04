@@ -1,5 +1,9 @@
 <template>
   <section class="portfolio">
+    <div class="portfolio__dots">
+      <ImageDots color="#EB00FF" />
+      <ImageDots color="#EB00FF" />
+    </div>
     <div class="portfolio__container container">
       <div class="portfolio__header">
         <h3 class="portfolio__sup-title sup-title">
@@ -40,10 +44,12 @@ import './style.scss'
 import PortfolioCard from './components/portfolioCard/PortfolioCard.vue'
 import PrimaryButton from 'components/primaryButton/PrimaryButton.vue'
 import { portfolioCards } from 'pages/mainPage/modules/portfolio/constants/cards'
+import ImageDots from 'components/imageDots/ImageDots.vue'
 
 export default defineComponent({
   name: 'Portfolio',
   components: {
+    ImageDots,
     PrimaryButton,
     PortfolioCard
   },

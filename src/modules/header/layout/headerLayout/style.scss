@@ -39,5 +39,19 @@
     &__container {
       padding: 7.2rem 10rem 2rem;
     }
+    &__burger {
+      display: none;
+    }
+    &__mobile-menu {
+      position: initial;
+      z-index: initial;
+      width: initial;
+      height: initial;
+      max-height: initial;
+      flex-grow: 1;
+    }
+    &__logo {
+      margin-right: 8rem;
+    }
   }
 }

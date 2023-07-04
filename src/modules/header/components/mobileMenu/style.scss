@@ -1,4 +1,5 @@
 @import "src/css/app.variables";
+@import "src/css/mixns";
 
 .mobile-menu {
   padding: 2.1rem 0 4rem;
@@ -47,10 +48,51 @@
     flex-direction: column;
     margin-bottom: 5rem;
   }
+
   .theme-dark & {
     &__item, &__button-lang {
       color: inherit;
     }
+
     background-color: $cBlack2;
+  }
+
+  @include minMediaDesktop {
+    display: block !important;
+    flex-basis: initial;
+    padding: 0;
+    width: 100%;
+    &__social {
+      display: none;
+    }
+    &__list {
+      display: flex;
+      margin-right: auto;
+      gap: 5rem;
+    }
+    &__container {
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0;
+    }
+    &__lang, &__nav, &__contact-us, &__list {
+      margin-bottom: 0;
+    }
+    &__lang {
+      margin-right: 8rem;
+      gap: .8rem;
+    }
+    &__contact-us {
+      flex-grow: initial;
+    }
+    &__nav {
+      flex-grow: 1;
+    }
+    &__item {
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      letter-spacing: 0.018rem;
+    }
   }
 }

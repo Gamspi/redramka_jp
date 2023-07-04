@@ -4,18 +4,18 @@
       <div class="header__logo">
         <Logo />
       </div>
+      <div class="header__mobile-menu">
+        <MobileMenu
+          :is-show="isShowMobileMenu"
+          @close="handelBurger"
+        />
+      </div>
       <div class="header__burger">
         <Burger
           :is-active="isShowMobileMenu"
           @click="handelBurger"
         />
       </div>
-    </div>
-    <div class="header__mobile-menu">
-      <MobileMenu
-        :is-show="isShowMobileMenu"
-        @close="handelBurger"
-      />
     </div>
   </header>
 </template>
@@ -27,7 +27,6 @@ import Burger from 'src/modules/header/components/burger/Burger.vue'
 import './style.scss'
 import MobileMenu from 'src/modules/header/components/mobileMenu/MobileMenu.vue'
 import { useController } from './controller'
-
 export default defineComponent({
   name: 'HeaderLayout',
   components: {

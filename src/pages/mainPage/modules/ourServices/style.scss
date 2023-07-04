@@ -4,7 +4,6 @@
 .our-services {
   padding: 2.8rem 0;
 
-
   &__header {
     @extend %header;
     margin-bottom: 3.5rem;
@@ -30,13 +29,22 @@
   }
 
   @include minMediaDesktop {
-    padding: 2.8rem 0;
+    padding: 6.2rem 0;
     &__header {
       text-align: left;
       align-items: flex-start;
+      margin-bottom: 2rem;
     }
     &__description {
       text-align: left;
+      font-size: 2rem;
+      line-height: 3.2rem;
+      letter-spacing: 0.02rem;
+      margin-bottom: 3.4rem;
+    }
+    &__more {
+      display: flex;
+      justify-content: flex-end;
     }
     &__container {
       display: grid;
@@ -49,5 +57,12 @@
       row-gap: 3.8rem;
       grid-template-columns: repeat(2, 1fr);
     }
+    &__body {
+      padding-top: 6.6rem;
+    }
+    &__sup-title{
+      margin-bottom: 3.1rem;
+    }
+
   }
 }

@@ -1,5 +1,9 @@
 <template>
   <section class="testimonial">
+    <div class="testimonial__dots">
+      <ImageDots color="#0B50FF" />
+      <ImageDots color="#0B50FF" />
+    </div>
     <div class="testimonial__container container">
       <div class="testimonial__header">
         <h3 class="testimonial__sup-title sup-title">
@@ -37,10 +41,11 @@ import { useLang } from 'src/hooks/useLang'
 import { useController } from './controller'
 import avatar from 'src/assets/images/testimonial/testimonial001.png'
 import TestimonialItem from 'pages/mainPage/modules/testimonial/components/testimonialItem/TestimonialItem.vue'
+import ImageDots from 'components/imageDots/ImageDots.vue'
 
 export default defineComponent({
   name: 'Testimonial',
-  components: { TestimonialItem },
+  components: { ImageDots, TestimonialItem },
   setup () {
     const controller = useController()
     const lang = useLang()

@@ -1,3 +1,5 @@
+@import "src/css/mixns";
+
 .collaboration {
   padding: 4.6rem 0 10rem;
 
@@ -43,5 +45,80 @@
   &__button {
     display: flex;
     justify-content: center;
+  }
+
+  &__background {
+    display: none;
+  }
+
+  @include minMediaDesktop {
+    padding: 13.9rem 0 14.9rem;
+
+    &__container {
+      display: grid;
+      grid-template-columns: 49rem 1fr;
+      grid-template-areas: "body images";
+      gap: 16.3rem;
+    }
+    &__images {
+      grid-area: images;
+      position: relative;
+    }
+    &__body {
+      grid-area: body;
+      padding-top: 2.8em;
+    }
+    &__title {
+      font-size: 5.5rem;
+      letter-spacing: 0.0165rem;
+      text-align: left;
+      line-height: 135%;
+      margin-bottom: 2.7rem;
+    }
+    &__description {
+      font-size: 2rem;
+      line-height: 3.4rem;
+      letter-spacing: 0.02rem;
+      text-align: left;
+    }
+    &__img {
+      border-radius: 1.6rem;
+
+      &:first-of-type {
+        align-self: flex-end;
+        width: 29.4rem;
+        height: 28.8rem;
+        margin-bottom: -19.7rem;
+      }
+
+      &:last-of-type {
+        width: 32.5rem;
+        height: 28.8rem;
+      }
+    }
+    &__dots {
+      position: absolute;
+      z-index: -1;
+
+      &:first-child {
+        width: 10.373rem;
+        height: 7.5676rem;
+        top: 5.6rem;
+        left: -1.9rem;
+      }
+
+      &:nth-child(2) {
+        width: 21.0205rem;
+        height: 7.0926rem;
+        right: 8.3rem;
+        top: 28.8rem;
+      }
+    }
+    &__background {
+      display: block;
+    }
+    &__button {
+      justify-content: flex-start;
+    }
   }
 }

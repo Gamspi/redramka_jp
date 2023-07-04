@@ -1,4 +1,5 @@
 @import "src/css/app.variables";
+@import "src/css/mixns";
 
 .portfolio-card {
   width: 34rem;
@@ -34,5 +35,19 @@
     line-height: 100%;
     letter-spacing: .0072rem;
     padding: 2.4rem;
+  }
+  @include minMediaDesktop {
+    width: 40rem;
+    height: 40rem;
+    &--small {
+      width: 35rem;
+      height: 35rem;
+    }
+    &__label {
+      padding: 4.5rem 3.8rem;
+    }
+    &--small &__label {
+      padding: 3.8rem 3.4rem;
+    }
   }
 }

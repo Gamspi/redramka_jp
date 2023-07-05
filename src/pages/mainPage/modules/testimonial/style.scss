@@ -9,9 +9,18 @@
     margin-bottom: 3.5rem;
   }
 
+  &__swiper {
+    margin: -2.5rem;
+  }
+
   &__slide {
     width: 100%;
     flex-shrink: 0;
+    padding: 0 2.5rem;
+
+    img {
+      pointer-events: none;
+    }
   }
 
   &__dots {
@@ -21,9 +30,20 @@
   @include minMediaDesktop {
     padding: 12.7rem 0 25rem;
     position: relative;
+
+    &__slide {
+      width: 43rem;
+    }
+
     &__container {
       position: relative;
+      overflow: hidden;
     }
+
+    &__body {
+      overflow: hidden;
+    }
+
     &__dots {
       display: block;
 

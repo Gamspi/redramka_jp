@@ -14,20 +14,24 @@
         </h2>
       </div>
       <div
-        ref="swiperRef"
         class="testimonial__body"
       >
         <div
-          v-for="item in reviews"
-          :key="item.id"
-          class="testimonial__slide"
+          ref="swiperRef"
+          class="testimonial__swiper"
         >
-          <TestimonialItem
-            :icon="avatar"
-            :text="item[local].text"
-            :name="item[local].name"
-            :specialty="item[local].specialty"
-          />
+          <div
+            v-for="item in reviews"
+            :key="item.id"
+            class="testimonial__slide"
+          >
+            <TestimonialItem
+              :icon="avatar"
+              :text="item[local].text"
+              :name="item[local].name"
+              :specialty="item[local].specialty"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -45,7 +49,10 @@ import ImageDots from 'components/imageDots/ImageDots.vue'
 
 export default defineComponent({
   name: 'Testimonial',
-  components: { ImageDots, TestimonialItem },
+  components: {
+    ImageDots,
+    TestimonialItem
+  },
   setup () {
     const controller = useController()
     const lang = useLang()

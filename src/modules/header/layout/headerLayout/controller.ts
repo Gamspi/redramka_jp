@@ -3,8 +3,8 @@ import { useBlockBody } from 'src/hooks/useBlockBody'
 
 export const useController = () => {
   const isShowMobileMenu = ref(false)
-  const handelBurger = () => {
-    isShowMobileMenu.value = !isShowMobileMenu.value
+  const handelBurger = (val: boolean) => {
+    isShowMobileMenu.value = val
   }
 
   useBlockBody(isShowMobileMenu, 'mobile-menu')

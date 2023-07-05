@@ -13,7 +13,7 @@
       <div class="header__burger">
         <Burger
           :is-active="isShowMobileMenu"
-          @click="handelBurger"
+          @click="()=> handelBurger(!isShowMobileMenu)"
         />
       </div>
     </div>

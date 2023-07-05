@@ -9,7 +9,7 @@ export const useController = ({ emit }: Args) => {
   const currentLang = computed(() => store.state.general.lang)
   const store = useStore()
   const handelShowContactUsPopup = () => {
-    emit('close')
+    emit('close', false)
     store.commit('general/mutateIsShowPopupContactUs', true)
   }
   const handelChangeLang = (value: LangEnum) => {

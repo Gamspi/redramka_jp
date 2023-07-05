@@ -56,9 +56,8 @@
 
     &__container {
       display: grid;
-      grid-template-columns: 49rem 1fr;
-      grid-template-areas: "body images";
       gap: 16.3rem;
+      grid-template: [start] "body images" auto[row-end]/49rem 1fr;
     }
     &__images {
       grid-area: images;

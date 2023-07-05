@@ -6,8 +6,12 @@
       <div
         v-if="isShowPopupContactUs"
         class="contact-us-popup"
+        @click="handelCloseBlock"
       >
-        <div class="contact-us-popup__container container">
+        <div
+          class="contact-us-popup__container container"
+          @click.stop
+        >
           <button
             class="contact-us-popup__close"
             @click="handelCloseBlock"

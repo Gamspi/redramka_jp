@@ -117,6 +117,18 @@
   &-leave-to {
     transform: translate3d(0, -100%, 0);
   }
+@include minMediaDesktop {
+  &-enter-active,
+  &-leave-active {
+    transition: opacity .5s ease;
+  }
+
+  &-enter-from,
+  &-leave-to {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
+}
 }
 
 .burger-icon-transition {

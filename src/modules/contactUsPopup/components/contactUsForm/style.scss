@@ -1,3 +1,5 @@
+@import "src/css/mixns";
+
 .contact-us-popup-form {
   &__button {
     display: flex;
@@ -16,9 +18,26 @@
       margin-bottom: 4rem;
     }
   }
-  &__field {
-    &--text-area {
-      height: 18.8rem;
+
+
+  @include minMediaDesktop {
+    &__field--text-area {
+      height: 12rem;
     }
+    &__field-list {
+      gap: 3.8rem;
+
+      &_text {
+        margin-bottom: 3rem;
+      }
+      &_file {
+        margin-bottom: 3.9rem;
+      }
+    }
+    &__button {
+      align-items: center;
+
+    }
+
   }
 }

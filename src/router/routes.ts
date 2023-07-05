@@ -9,6 +9,11 @@ const routes: RouteRecordRaw[] = [
     children: [{ path: '', component: () => import('pages/mainPage/Index.vue') }]
   },
   {
+    path: '/about',
+    component: MainLayout,
+    children: [{ path: '', component: () => import('pages/about/about.vue') }]
+  },
+  {
     path: '/:catchAll(.*)*',
     component: () => import('pages/Error404.vue')
   }

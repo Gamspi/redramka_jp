@@ -17,9 +17,9 @@
         color="white"
         text-color="blue"
         unelevated
-        to="/"
         label="Go Home"
         no-caps
+        @click="$router.push('/')"
       />
     </div>
   </div>

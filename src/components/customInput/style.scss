@@ -27,7 +27,6 @@
     font-size: 1.6rem;
     line-height: 2.4rem;
     letter-spacing: 0.01em;
-
   }
 
   &__value {
@@ -80,14 +79,17 @@
       color: $cRed03;
     }
   }
+
   &._focus {
     .custom-input__label {
       color: $cBlackPrimary;
     }
+
     .custom-input__body {
       border-color: $cBlackPrimary;
     }
   }
+
   .theme-dark & {
     &__label {
       background-color: $cBlack2;
@@ -105,4 +107,12 @@
     }
   }
 
+  @include minMediaDesktop {
+    &__label {
+      margin: 0 2rem;
+    }
+    &__value {
+      margin: 1.1rem 2.4rem;
+    }
+  }
 }

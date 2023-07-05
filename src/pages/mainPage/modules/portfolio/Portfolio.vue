@@ -19,8 +19,8 @@
       <div class="portfolio__body">
         <PortfolioCard
           v-for="item in portfolioCards"
-          :key="item.label"
-          :label="item.label"
+          :key="item.label[LangEnum.ENG]"
+          :label="item.label[$store.state.general.lang]"
           :image="item.image"
           :src="item.src"
           :is-small="item.isSmall"
@@ -45,6 +45,7 @@ import PortfolioCard from './components/portfolioCard/PortfolioCard.vue'
 import PrimaryButton from 'components/primaryButton/PrimaryButton.vue'
 import { portfolioCards } from 'pages/mainPage/modules/portfolio/constants/cards'
 import ImageDots from 'components/imageDots/ImageDots.vue'
+import { LangEnum } from 'src/utils/enum/langEnum'
 
 export default defineComponent({
   name: 'Portfolio',
@@ -57,6 +58,7 @@ export default defineComponent({
     const lang = useLang()
     return {
       lang,
+      LangEnum,
       portfolioCards
     }
   }

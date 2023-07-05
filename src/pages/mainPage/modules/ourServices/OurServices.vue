@@ -25,7 +25,7 @@
         <OurServicesCard
           v-for="item in ourServicesCards"
           :key="item.to"
-          :label="item.label"
+          :label="item.label[$store.state.general.lang]"
           :to="item.to"
           :icon="item.icon"
           :color="item.color"

@@ -12,7 +12,7 @@
     </div>
 
     <span class="our-services-card__label">
-      {{ label[$store.state.general.lang] }}
+      {{ label }}
     </span>
   </a>
 </template>

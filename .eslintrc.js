@@ -79,6 +79,7 @@ module.exports = {
     'one-var': 'off',
     'no-void': 'off',
     'multiline-ternary': 'off',
+    'vue/no-v-html': 'off',
 
     'import/first': 'off',
     'import/namespace': 'error',

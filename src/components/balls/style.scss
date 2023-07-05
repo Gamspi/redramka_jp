@@ -1,0 +1,13 @@
+@import "src/css/templates";
+.balls {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: -1;
+
+  &__item {
+    @extend %ballsPosition;
+    z-index: -1;
+  }
+}

@@ -2,19 +2,7 @@
 @import "src/css/app.variables";
 
 .main-page {
-
   overflow: hidden;
-  &__balls {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    left: 0;
-    z-index: -1;
-  }
-  &__ball {
-    @extend %ballsPosition;
-    z-index: -1;
-  }
   section {
     opacity: 1;
     transition: opacity .6s ease-in;

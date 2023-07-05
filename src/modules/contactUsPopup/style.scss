@@ -76,10 +76,13 @@
   }
 
   @include minMediaDesktop {
-    background: rgba($cBlack1, .6);
     display: flex;
     padding: 4rem;
     overflow: auto;
+    &, .theme-dark & {
+      background: rgba($cBlack1, .6);
+    }
+
     &__container {
       background-color: $cWhite1;
       margin: auto;
@@ -88,6 +91,11 @@
       height: auto;
       padding: 4rem;
       overflow-y: initial;
+
+      .theme-dark & {
+        background-color: $cBlack1;
+        border: .1rem solid rgba($cWhite1, .6);
+      }
     }
 
     &__title {

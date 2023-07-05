@@ -76,7 +76,7 @@ html {
   font-size: calc(100vw / #{$mobileBreakpoint} * 10);
 
   @include minMediaDesktop {
-    font-size: calc(100vw / #{$desktopBreakpoint} * 10);
+    font-size: 10px;
   }
 }
 
@@ -172,9 +172,9 @@ input, input:focus-visible, textarea, textarea:focus-visible {
   padding: 0 2.5rem;
   @include minMediaDesktop {
     padding: 0 10rem;
-    max-width: 144rem;
     margin: 0 auto;
     width: 100%;
+    max-width: 144rem;
   }
 }
 

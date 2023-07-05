@@ -2,6 +2,7 @@
 @import "src/css/mixns";
 
 .custom-input {
+  cursor: text;
   &--text-area, &__body {
     height: 100%;
   }
@@ -72,13 +73,7 @@
     top: -.9rem;
   }
 
-  &--error &__body, &--error:hover &__body {
-    border-color: $cRed03;
 
-    .custom-input__label {
-      color: $cRed03;
-    }
-  }
 
   &._focus {
     .custom-input__label {
@@ -113,6 +108,13 @@
     }
     &__value {
       margin: 1.1rem 2.4rem;
+    }
+  }
+  &--error &__body, &--error:hover &__body {
+    border-color: $cRed03;
+
+    .custom-input__label {
+      color: $cRed03;
     }
   }
 }

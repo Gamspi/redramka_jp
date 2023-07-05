@@ -34,6 +34,8 @@
   @include minMediaDesktop {
     &__container {
       padding: 7.2rem 10rem 2rem;
+      max-width: 144rem;
+      margin: auto;
     }
     &__burger {
       display: none;

@@ -1,10 +1,10 @@
 <template>
   <section class="portfolio">
-    <div class="portfolio__dots">
-      <ImageDots color="#EB00FF" />
-      <ImageDots color="#EB00FF" />
-    </div>
     <div class="portfolio__container container">
+      <div class="portfolio__dots">
+        <ImageDots color="#EB00FF" />
+        <ImageDots color="#EB00FF" />
+      </div>
       <div class="portfolio__header">
         <h3 class="portfolio__sup-title sup-title">
           {{ lang.portfolio.supTitle }}

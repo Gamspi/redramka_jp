@@ -1,5 +1,5 @@
 <template>
-  <div
+  <label
     :class="['custom-input', {
       'custom-input--fill': modelValue || defaultValue,
       'custom-input--error': isError,
@@ -10,7 +10,6 @@
     <div class="custom-input__body">
       <input
         v-if="!isArea"
-        :id="inputId"
         :type="type"
         :value="modelValue || defaultValue"
         class="custom-input__value"
@@ -20,18 +19,16 @@
       >
       <textarea
         v-else
-        :id="inputId"
         :value="modelValue || defaultValue"
         class="custom-input__value"
         @input="handelChangeModelValue"
       />
-      <label
+      <span
         v-if="placeholder"
-        :for="inputId"
         class="custom-input__label"
       >
         {{ placeholder }}
-      </label>
+      </span>
     </div>
     <transition name="fabe-height">
       <span
@@ -39,7 +36,7 @@
         class="custom-input__error"
       > {{ errorMessage }}</span>
     </transition>
-  </div>
+  </label>
 </template>
 
 <script lang="ts">

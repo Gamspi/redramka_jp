@@ -6,6 +6,7 @@ export const useController = ({ emit }: Args) => {
   const defaultValue = ref('')
   const isFocused = ref(false)
   const inputId = getRandom(undefined, 'custom-input-')
+  // todo  убрать getRandom
 
   const handelFocus = () => {
     isFocused.value = true
@@ -18,6 +19,7 @@ export const useController = ({ emit }: Args) => {
     const value = target.value
     defaultValue.value = value
     emit('update:modelValue', value)
+    emit('update:is', false)
   }
   return {
     inputId,

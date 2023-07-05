@@ -21,7 +21,9 @@
   @include minMediaDesktop {
     padding: 12.7rem 0 25rem;
     position: relative;
-
+    &__container {
+      position: relative;
+    }
     &__dots {
       display: block;
 

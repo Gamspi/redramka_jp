@@ -46,7 +46,7 @@
               </p>
             </div>
             <div class="contact-us-popup__body">
-              <ContactUsPopupForm />
+              <ContactUsPopupForm @onSubmit="handelSubmitForm" />
             </div>
           </div>
         </div>

@@ -17,6 +17,7 @@
     <input
       type="file"
       class="file-picker__input"
+      @input="handelChangeInput"
     >
   </label>
 </template>
@@ -25,6 +26,7 @@
 import { defineComponent } from 'vue'
 import './style.scss'
 import { useLang } from 'src/hooks/useLang'
+import { useController } from './controller'
 
 export default defineComponent({
   name: 'FilePicker',
@@ -34,10 +36,12 @@ export default defineComponent({
       default: ''
     }
   },
-  setup () {
+  setup (_, { emit }) {
     const lang = useLang()
+    const controller = useController({ emit })
     return {
-      lang
+      lang,
+      ...controller
     }
   }
 })

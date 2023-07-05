@@ -1,10 +1,10 @@
 <template>
   <section class="testimonial">
-    <div class="testimonial__dots">
-      <ImageDots color="#0B50FF" />
-      <ImageDots color="#0B50FF" />
-    </div>
     <div class="testimonial__container container">
+      <div class="testimonial__dots">
+        <ImageDots color="#0B50FF" />
+        <ImageDots color="#0B50FF" />
+      </div>
       <div class="testimonial__header">
         <h3 class="testimonial__sup-title sup-title">
           {{ lang.testimonial.supTitle }}

@@ -1,6 +1,7 @@
 import { LangEnum } from 'src/utils/enum/langEnum'
+import { FooterMenuItem } from 'src/modules/footer/components/footerMenuItem/type'
 
-export const footerMenu = [
+export const footerMenu: FooterMenuItem[] = [
   {
     title: {
       [LangEnum.ENG]: 'Terms & policies',

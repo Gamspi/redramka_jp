@@ -1,14 +1,16 @@
 import { onMounted, onUnmounted, ref, watch } from 'vue'
 
-type SwiperOptions = {
-  spaceBetween?: number
-}
 export const useSwiper = () => {
   const swiperRef = ref<HTMLElement | null>(null)
   const position = ref(0)
   const startPosition = ref(0)
   const childrenCount = ref(0)
   const containerWidth = ref(0)
+  const observer = new ResizeObserver(resetPosition)
+
+  function resetPosition () {
+    position.value = 0
+  }
 
   const handelSwipeEnd = () => {
     if (swiperRef.value) {
@@ -63,17 +65,27 @@ export const useSwiper = () => {
       swiperRef.value.style.transform = `translate3d(${value}px, 0, 0)`
     }
   })
-  onMounted(() => {
+  const initSwiper = () => {
     if (swiperRef.value) {
       childrenCount.value = swiperRef.value.childElementCount
       containerWidth.value = swiperRef.value.scrollWidth
       swiperRef.value.style.display = 'flex'
       swiperRef.value.addEventListener('touchstart', handelSwipeStart)
       swiperRef.value.addEventListener('mousedown', handelSwipeStart)
-      const observer = new ResizeObserver(handelSwipeEnd)
       observer.observe(swiperRef.value)
     }
-  })
+  }
+  const refreshSwiper = () => {
+    if (swiperRef.value) {
+      console.log('test')
+      observer.unobserve(swiperRef.value)
+      swiperRef.value.removeEventListener('touchstart', handelSwipeStart)
+      swiperRef.value.removeEventListener('mousedown', handelSwipeStart)
+    }
+
+    initSwiper()
+  }
+  onMounted(initSwiper)
   onUnmounted(() => {
     if (swiperRef.value) {
       swiperRef.value.removeEventListener('touchstart', handelSwipeStart)
@@ -81,6 +93,7 @@ export const useSwiper = () => {
     }
   })
   return {
-    swiperRef
+    swiperRef,
+    refreshSwiper
   }
 }

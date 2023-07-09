@@ -2,7 +2,7 @@
 @import "src/css/mixns";
 
 .main-block {
-  padding: 2.9rem 0;
+  padding: 5.9rem 0 2.9rem;
 
   &__container {
     padding: 0 1.452rem 0 2.093rem;
@@ -56,7 +56,7 @@
     z-index: 1;
   }
   @include minMediaDesktop {
-    padding: 7.6rem 0;
+    padding: 4.7rem 0 7.6rem;
     &__title {
       line-height: normal;
       letter-spacing: 0.064rem;

@@ -10,14 +10,17 @@
   }
 
   &__swiper {
-    margin: -2.5rem;
+    grid-auto-columns: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    margin: 0 -2.5rem;
   }
 
   &__slide {
     width: 100%;
     flex-shrink: 0;
     padding: 0 2.5rem;
-
+    height: 100%;
     img {
       pointer-events: none;
     }
@@ -28,22 +31,29 @@
   }
 
   @include minMediaDesktop {
-    padding: 12.7rem 0 25rem;
+    padding: 12.7rem 0 8.8rem;
     position: relative;
 
     &__slide {
       width: 43rem;
     }
+    &__swiper {
+      grid-auto-columns: 1fr;
+
+    }
 
     &__container {
       position: relative;
-      overflow: hidden;
     }
 
     &__body {
+      padding: 2rem;
+      margin: 0 -2rem;
       overflow: hidden;
     }
-
+    &__header {
+      margin-bottom: 3rem;
+    }
     &__dots {
       display: block;
 
@@ -53,14 +63,14 @@
         height: 7.0926rem;
 
         &:first-child {
-          right: 7.6rem;
-          top: 59rem;
+          right: 7.5rem;
+          top: 46.7rem;
           transform: rotate(14.484deg);
         }
 
         &:nth-child(2) {
-          left: 21.9rem;
-          top: 8.2rem;
+          left: 21.8rem;
+          top: -4.3rem;
           transform: rotate(14.484deg);
         }
       }

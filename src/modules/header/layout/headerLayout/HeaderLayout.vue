@@ -25,7 +25,7 @@ import { defineComponent } from 'vue'
 import Logo from 'components/logo/Logo.vue'
 import Burger from 'src/modules/header/components/burger/Burger.vue'
 import './style.scss'
-import MobileMenu from 'src/modules/header/components/mobileMenu/MobileMenu.vue'
+import MobileMenu from 'src/modules/header/components/menu/Menu.vue'
 import { useController } from './controller'
 export default defineComponent({
   name: 'HeaderLayout',

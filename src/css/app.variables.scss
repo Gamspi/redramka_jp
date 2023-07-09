@@ -7,7 +7,7 @@ $Quicksand: Quicksand, sans-serif, $fontpostfix;
 $Nunito: Nunito, sans-serif, $fontpostfix;
 
 /*   Size variables   */
-$mobileHeaderHeight: 11.3rem;
+$mobileHeaderHeight: 8.3rem;
 $desktopHeaderHeight: 14.2rem;
 
 /*   Color variables   */
@@ -43,6 +43,5 @@ $fFieldTextColor: #9A99A2;
 /*  BREAKPOINTS */
 $mobileBreakpoint: 390;
 $desktopBreakpoint: 1440;
-$wideDesktopBreakpoint: 1440;
 
 $transitionDefault: .15s linear;

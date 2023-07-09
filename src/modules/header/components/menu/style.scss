@@ -1,7 +1,7 @@
 @import "src/css/app.variables";
 @import "src/css/mixns";
 
-.mobile-menu {
+.menu {
   padding: 2.1rem 0 4rem;
   background-color: $cWhite1;
   flex-grow: 1;
@@ -20,7 +20,6 @@
     line-height: 2.4rem;
     letter-spacing: 0.018rem;
     text-transform: capitalize;
-
     ._active, &._active {
       font-weight: 700;
     }

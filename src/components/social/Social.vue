@@ -5,6 +5,7 @@
       :key="item.link"
       class="social__item"
       :href="item.link"
+      target="_blank"
     >
       <img
         class="social__icon"

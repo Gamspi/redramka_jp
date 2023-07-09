@@ -4,12 +4,14 @@
       {{ item.title[$store.state.general.lang] }}
     </h4>
     <div class="footer-menu-item__body">
-      <a
+      <router-link
         v-for="link in item.list"
         :key="link.label + link.link"
-        :href="link.link"
+        :to="link.link"
         class="footer-menu-item__link"
-      >{{ link.label[$store.state.general.lang] }}</a>
+      >
+        {{ link.label[$store.state.general.lang] }}
+      </router-link>
     </div>
   </div>
 </template>

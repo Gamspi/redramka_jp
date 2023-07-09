@@ -46,7 +46,7 @@
                 />
               </svg>
             </template>
-            About Us
+            {{ lang.about.iconButton }}
           </PrimaryButton>
         </div>
       </div>

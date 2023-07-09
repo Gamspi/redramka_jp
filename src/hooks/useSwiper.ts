@@ -7,6 +7,7 @@ export const useSwiper = () => {
   const childrenCount = ref(0)
   const containerWidth = ref(0)
   const observer = new ResizeObserver(resetPosition)
+  const defaultStyleTransition = 'transform .15s linear'
 
   function resetPosition () {
     position.value = 0
@@ -16,16 +17,17 @@ export const useSwiper = () => {
     if (swiperRef.value) {
       const childrenCount = swiperRef.value.childElementCount
       const slideWidth = swiperRef.value.scrollWidth / childrenCount
-      const showCountSlides = swiperRef.value.clientWidth / slideWidth
+      const showSlidesCount = swiperRef.value.clientWidth / slideWidth
       const activeSlide = Math.round(position.value / (slideWidth))
+      const isShowedLastSlide = Math.abs(activeSlide) + showSlidesCount > childrenCount
       if (activeSlide > 0) {
         position.value = 0
-      } else if (Math.abs(activeSlide) + showCountSlides > childrenCount) {
-        position.value = -(childrenCount - showCountSlides) * (slideWidth)
+      } else if (isShowedLastSlide) {
+        position.value = -(childrenCount - showSlidesCount) * (slideWidth)
       } else {
         position.value = activeSlide * slideWidth
       }
-      swiperRef.value.style.transition = 'transform .15s linear'
+      swiperRef.value.style.transition = defaultStyleTransition
       swiperRef.value.removeEventListener('touchmove', handelSwipeMove)
       swiperRef.value.removeEventListener('mousemove', handelSwipeMove)
       swiperRef.value.removeEventListener('touchend', handelSwipeEnd)
@@ -69,29 +71,23 @@ export const useSwiper = () => {
     if (swiperRef.value) {
       childrenCount.value = swiperRef.value.childElementCount
       containerWidth.value = swiperRef.value.scrollWidth
-      swiperRef.value.style.display = 'flex'
       swiperRef.value.addEventListener('touchstart', handelSwipeStart)
       swiperRef.value.addEventListener('mousedown', handelSwipeStart)
       observer.observe(swiperRef.value)
     }
   }
-  const refreshSwiper = () => {
+  const removeSwiper = () => {
     if (swiperRef.value) {
-      console.log('test')
-      observer.unobserve(swiperRef.value)
       swiperRef.value.removeEventListener('touchstart', handelSwipeStart)
       swiperRef.value.removeEventListener('mousedown', handelSwipeStart)
     }
-
+  }
+  const refreshSwiper = () => {
+    removeSwiper()
     initSwiper()
   }
   onMounted(initSwiper)
-  onUnmounted(() => {
-    if (swiperRef.value) {
-      swiperRef.value.removeEventListener('touchstart', handelSwipeStart)
-      swiperRef.value.removeEventListener('mousedown', handelSwipeStart)
-    }
-  })
+  onUnmounted(removeSwiper)
   return {
     swiperRef,
     refreshSwiper

@@ -1,7 +1,7 @@
 <template>
-  <a
+  <router-link
     class="our-services-card"
-    :href="to"
+    :to="to"
   >
     <div :class="['our-services-card__circle' , `our-services-card__circle--${color}`]">
       <img
@@ -14,7 +14,7 @@
     <span class="our-services-card__label">
       {{ label }}
     </span>
-  </a>
+  </router-link>
 </template>
 
 <script lang='ts'>

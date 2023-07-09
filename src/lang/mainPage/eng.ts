@@ -20,7 +20,8 @@ export const mainPageEng = {
       'We move with make a Creative Strategy for help your business goal, we help to improve your income by a services we have. make your content look interesting and make people look for your business',
       'We move with make a Creative Strategy for help your business goal, we help to improve your income by a services we have. make your content look interesting and make people look for your business'
     ],
-    button: 'About Us'
+    button: 'About Us',
+    iconButton: 'Our Story'
   },
   ourServices: {
     supTitle: 'Our Services',

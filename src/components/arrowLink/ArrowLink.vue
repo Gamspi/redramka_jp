@@ -15,23 +15,14 @@
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M15 18L21 12L15 6"
+        v-for="path in paths"
+        :key="path"
+        :d="path"
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
-      <path
-        d="M3 12H20"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        d="M21 12H20"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
+
     </svg>
   </a>
 </template>
@@ -53,7 +44,14 @@ export default defineComponent({
     }
   },
   setup () {
-    return {}
+    const paths = [
+      'M15 18L21 12L15 6',
+      'M3 12H20',
+      'M21 12H20'
+    ]
+    return {
+      paths
+    }
   }
 })
 </script>

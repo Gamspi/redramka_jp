@@ -1,16 +1,16 @@
 <template>
-  <Transition name="mobile-menu-transition">
+  <Transition name="menu-transition">
     <aside
       v-show="isShow"
-      class="mobile-menu"
+      class="menu"
     >
-      <div class="mobile-menu__container container">
-        <nav class="mobile-menu__nav">
-          <ul class="mobile-menu__list">
+      <div class="menu__container container">
+        <nav class="menu__nav">
+          <ul class="menu__list">
             <li
               v-for="(item, index) in navMenu"
               :key="item.link + index"
-              class="mobile-menu__item"
+              class="menu__item"
             >
               <router-link
                 :to="item.link"
@@ -21,17 +21,17 @@
             </li>
           </ul>
         </nav>
-        <div class="mobile-menu__lang">
+        <div class="menu__lang">
           <button
             v-for="item in LangEnum"
             :key="item"
-            :class="['mobile-menu__button-lang', {'_active': currentLang === item}]"
+            :class="['menu__button-lang', {'_active': currentLang === item}]"
             @click="()=>handelChangeLang(item)"
           >
             {{ item }}
           </button>
         </div>
-        <div class="mobile-menu__contact-us">
+        <div class="menu__contact-us">
           <PrimaryButton
             bordered
             @click="handelShowContactUsPopup"
@@ -39,7 +39,7 @@
             {{ lang.common.contactUs }}
           </PrimaryButton>
         </div>
-        <div class="mobile-menu__social">
+        <div class="menu__social">
           <Social :list="socialList" />
         </div>
       </div>
@@ -52,14 +52,14 @@ import { defineComponent } from 'vue'
 import { navMenu } from '../../constants/navMenu'
 import './style.scss'
 import { LangEnum } from 'src/utils/enum/langEnum'
-import { useController } from './controller'
 import PrimaryButton from 'components/primaryButton/PrimaryButton.vue'
 import Social from 'components/social/Social.vue'
 import { socialList } from 'src/constants/socialList'
 import { useLang } from 'src/hooks/useLang'
+import { useController } from 'src/modules/header/components/menu/controller'
 
 export default defineComponent({
-  name: 'MobileMenu',
+  name: 'Menu',
   components: { Social, PrimaryButton },
   props: {
     isShow: {

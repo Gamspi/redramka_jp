@@ -1,5 +1,5 @@
 <template>
-  <div class="main-block-review">
+  <article class="main-block-review">
     <div class="main-block-review__header">
       <img
         src="../../../../../../assets/images/mainBlock/mainBlockReviewAvatar.png"
@@ -10,15 +10,15 @@
         <h5 class="main-block-review__name">
           {{ lang.mainBlock.review.name }}
         </h5>
-        <div class="main-block-review__job-title">
+        <span class="main-block-review__job-title">
           {{ lang.mainBlock.review.job }}
-        </div>
+        </span>
       </div>
     </div>
     <q class="main-block-review__body">
       {{ lang.mainBlock.review.text }}
     </q>
-  </div>
+  </article>
 </template>
 
 <script>

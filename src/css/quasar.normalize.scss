@@ -16,7 +16,6 @@ html body {
   overflow-y: auto;
   user-select: none;
   min-width: $minContentWidth;
-
   &.theme-dark {
     color: $cWhite2;
     background-color: $cBlack2;

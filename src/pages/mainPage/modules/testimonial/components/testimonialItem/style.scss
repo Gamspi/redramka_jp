@@ -1,4 +1,5 @@
 @import "src/css/app.variables";
+@import "src/css/mixns";
 
 .testimonial-item {
   background-color: $cWhite1;
@@ -6,7 +7,7 @@
   box-shadow: 0 .8rem 2.4rem 0 rgba($cBlack1, 0.05);
   padding: 4rem;
   width: 100%;
-
+  height: 100%;
   .theme-dark & {
     background-color: $cBlack3;
   }
@@ -16,6 +17,7 @@
     height: 7rem;
     border-radius: 50%;
     overflow: hidden;
+    align-self: flex-start;
   }
 
   &__header {
@@ -26,6 +28,8 @@
   }
 
   &__name {
+    padding-top: .7rem;
+    line-height: 100%;
     color: $cBlue01;
     font-size: 1.8rem;
     font-weight: 600;
@@ -50,5 +54,28 @@
     line-height: 2.4rem;
     letter-spacing: .014rem;
     opacity: 0.8;
+  }
+
+  @include minMediaDesktop {
+    padding-top: 5rem;
+    min-height: 33.5rem;
+    &__quote {
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+      letter-spacing: 0.018rem;
+    }
+    &__name {
+      padding-top: .7rem;
+      font-size: 2rem;
+      line-height: 60%;
+      letter-spacing: 0.02rem;
+    }
+    &__specialty {
+      font-size: 1.1rem;
+      letter-spacing: .03rem;
+    }
+    &__header {
+      margin-bottom: 2.5rem;
+    }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="testimonial-item">
+  <article class="testimonial-item">
     <div class="testimonial-item__header">
       <img
         :src="icon"
@@ -18,7 +18,7 @@
     <q class="testimonial-item__quote">
       {{ text }}
     </q>
-  </div>
+  </article>
 </template>
 
 <script lang="ts">

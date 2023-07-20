@@ -17,13 +17,13 @@ export const useSwiper = () => {
     if (swiperRef.value) {
       const childrenCount = swiperRef.value.childElementCount
       const slideWidth = swiperRef.value.scrollWidth / childrenCount
-      const showSlidesCount = swiperRef.value.clientWidth / slideWidth
+      const showedSlidesCount = swiperRef.value.clientWidth / slideWidth
       const activeSlide = Math.round(position.value / (slideWidth))
-      const isShowedLastSlide = Math.abs(activeSlide) + showSlidesCount > childrenCount
+      const isShowedLastSlide = Math.abs(activeSlide) + showedSlidesCount > childrenCount
       if (activeSlide > 0) {
         position.value = 0
       } else if (isShowedLastSlide) {
-        position.value = -(childrenCount - showSlidesCount) * (slideWidth)
+        position.value = -(childrenCount - showedSlidesCount) * (slideWidth)
       } else {
         position.value = activeSlide * slideWidth
       }
@@ -41,25 +41,23 @@ export const useSwiper = () => {
       swiperRef.value.addEventListener('touchend', handelSwipeEnd)
       document.addEventListener('mouseup', handelSwipeEnd)
     }
+    if (swiperRef.value) swiperRef.value.style.transition = ''
     if ('touches' in e) {
-      for (let i = 0; i < e.touches.length; i++) {
-        if (swiperRef.value) swiperRef.value.style.transition = ''
-        startPosition.value = e.touches[i].clientX
-      }
+      if (e.touches.length) startPosition.value = e.touches[0].clientX
     } else {
-      if (swiperRef.value) swiperRef.value.style.transition = ''
       startPosition.value = e.clientX
     }
   }
   const handelSwipeMove = (e: TouchEvent | MouseEvent) => {
+    let movePosition
     if ('touches' in e) {
-      for (let i = 0; i < e.touches.length; i++) {
-        position.value += e.touches[i].clientX - startPosition.value
-        startPosition.value = e.touches[i].clientX
-      }
+      movePosition = e.touches[0].clientX
     } else {
-      position.value += e.clientX - startPosition.value
-      startPosition.value = e.clientX
+      movePosition = e.clientX
+    }
+    if (movePosition) {
+      position.value += movePosition - startPosition.value
+      startPosition.value = movePosition
     }
   }
   watch(position, (value) => {

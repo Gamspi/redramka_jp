@@ -1,6 +1,1 @@
-<svg width="36" height="38" viewBox="0 0 36 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-<ellipse cx="18" cy="18.9999" rx="18" ry="18.0036" fill="white"/>
-<path d="M21.5992 14.519C23.0314 14.519 24.4049 15.088 25.4176 16.1007C26.4303 17.1134 26.9992 18.4869 26.9992 19.919V26.219H23.3992V19.919C23.3992 19.4417 23.2096 18.9838 22.872 18.6463C22.5344 18.3087 22.0766 18.119 21.5992 18.119C21.1218 18.119 20.664 18.3087 20.3264 18.6463C19.9889 18.9838 19.7992 19.4417 19.7992 19.919V26.219H16.1992V19.919C16.1992 18.4869 16.7681 17.1134 17.7808 16.1007C18.7935 15.088 20.167 14.519 21.5992 14.519V14.519Z" stroke="#383638" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12.6 15.4192H9V26.2192H12.6V15.4192Z" stroke="#383638" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M10.8 12.7189C11.7941 12.7189 12.6 11.913 12.6 10.9189C12.6 9.92478 11.7941 9.1189 10.8 9.1189C9.80589 9.1189 9 9.92478 9 10.9189C9 11.913 9.80589 12.7189 10.8 12.7189Z" stroke="#383638" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+<svg width="36" height="38" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="18" cy="19" rx="18" ry="18.004" fill="#fff"/><path d="M21.6 14.519a5.4 5.4 0 0 1 5.4 5.4v6.3h-3.6v-6.3a1.8 1.8 0 1 0-3.6 0v6.3h-3.6v-6.3a5.4 5.4 0 0 1 5.4-5.4v0ZM12.6 15.42H9v10.8h3.6v-10.8ZM10.8 12.719a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6Z" stroke="#383638" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>

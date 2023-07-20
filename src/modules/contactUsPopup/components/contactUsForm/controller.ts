@@ -1,44 +1,58 @@
 import { ref } from 'vue'
+import { useLang } from 'src/hooks/useLang'
 
 type Args = {
   emit: (event: string, ...args: any[]) => void
 }
 
 export const useController = ({ emit }: Args) => {
-  const fields = ref({
-    name: {
+  const lang = useLang()
+  const fields = ref([
+    {
+      name: 'name',
       value: '',
-      isError: false
+      isError: false,
+      errorMessage: '',
+      placeholder: lang.value.contactUsPopup.fields.name,
+      isArea: false
     },
-    email: {
+    {
+      name: 'email',
       value: '',
-      isError: false
+      isError: false,
+      errorMessage: '',
+      placeholder: lang.value.contactUsPopup.fields.email,
+      isArea: false
     },
-    message: {
+    {
+      name: 'message',
       value: '',
-      isError: false
+      isError: false,
+      errorMessage: '',
+      placeholder: lang.value.contactUsPopup.fields.message,
+      isArea: true
     }
-  })
+  ])
   const filesField = ref<File[]>([])
   const validationFields = () => {
     let isValid = true
-    for (const fieldsKey in fields.value) {
-      const field = fields.value[fieldsKey as keyof typeof fields.value]
+    fields.value.forEach((field) => {
       if (!field.value) {
         field.isError = true
+        field.errorMessage = 'Error message' // сдулано как пример
         isValid = false
       } else {
         field.isError = false
       }
-    }
+    })
     return isValid
   }
   const handelSubmitForm = () => {
     if (validationFields()) {
       const formData = new FormData()
-      for (const valueKey in fields.value) {
-        formData.append(valueKey, fields.value[valueKey as keyof typeof fields.value].value)
-      }
+      fields.value.forEach((field) => {
+        formData.append(field.name, field.value)
+      })
       filesField.value.forEach(item => formData.append('file[]', item))
       emit('onSubmit', formData)
     }

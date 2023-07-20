@@ -2,10 +2,13 @@
 @import "src/css/mixns";
 
 .custom-input {
-  cursor: text;
+  display: block;
+
+  max-width: 100%;
   &--text-area, &__body {
     height: 100%;
   }
+  position: relative;
 
   &__body {
     position: relative;
@@ -14,6 +17,7 @@
     width: 100%;
     display: flex;
     transition: border-color $transitionDefault;
+    cursor: text;
     @include hover {
       border-color: $cLightBlue;
       .custom-input__label {
@@ -35,6 +39,12 @@
     margin: 1rem 1.6rem;
     overflow: hidden;
     flex-grow: 1;
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active{
+      -webkit-box-shadow: 0 0 0 3rem $cWhite1 inset !important;
+    }
   }
 
   textarea {
@@ -57,15 +67,13 @@
 
   &__error {
     display: block;
-    padding: 0 1.6rem;
+    padding: .4rem 1.7rem 0;
     max-width: 100%;
-    left: 1.7rem;
     font-weight: 700;
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
     color: $cRed03;
   }
-
 
   &--fill &__label, &__value:focus + &__label {
     font-size: 1.2rem;
@@ -73,9 +81,7 @@
     top: -.9rem;
   }
 
-
-
-  &._focus {
+  &._focus:not(:hover) {
     .custom-input__label {
       color: $cBlackPrimary;
     }
@@ -86,8 +92,19 @@
   }
 
   .theme-dark & {
-    &__label {
+    &__label, &__body {
       background-color: $cBlack2;
+    }
+    &__value {
+      color:inherit !important;
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active{
+        border: none !important;
+        -webkit-text-fill-color: $cWhite2 !important;
+        -webkit-box-shadow: 0 0 0 3rem $cBlack2 inset !important;
+      }
     }
 
     &__body {
@@ -110,8 +127,8 @@
       margin: 1.1rem 2.4rem;
     }
   }
-  &--error &__body, &--error:hover &__body {
-    border-color: $cRed03;
+  &--error &__body, &--error:hover &__body, &--error._focus &__body {
+    border-color: $cRed03 !important;
 
     .custom-input__label {
       color: $cRed03;

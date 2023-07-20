@@ -8,9 +8,9 @@ export default class PostService {
       formData.append(element, String(data[element]))
     })
     const result: ResponseType<T> = await (await ApiService.ApiClient().post(`${url}`, formData).catch(
-      err => { //eslint-disable-line
+      err => {
         throw new HttpError('Ошибка при загрузке', err.response) //eslint-disable-line
-      }))?.data as ResponseType<T>  //eslint-disable-line
-    return result //eslint-disable-line
+      }))?.data as ResponseType<T>
+    return result
   }
 }

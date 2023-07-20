@@ -1,5 +1,5 @@
 <template>
-  <div class="balls">
+  <aside class="balls">
     <div class="balls__container container">
       <div class="balls__item">
         <Ball
@@ -28,7 +28,7 @@
         />
       </div>
     </div>
-  </div>
+  </aside>
 </template>
 
 <script lang="ts">

@@ -6,11 +6,19 @@
   background-color: $cWhite1;
   flex-grow: 1;
   flex-basis: 100vh;
+
   overflow-y: auto;
 
   &__container {
     display: flex;
     flex-direction: column;
+    width: 100vw;
+  }
+  &__button-lang, &__item a {
+    transition: color $transitionDefault;
+    @include hover {
+      color: $cLightBlue;
+    }
   }
 
   &__item, &__button-lang {
@@ -20,10 +28,8 @@
     line-height: 2.4rem;
     letter-spacing: 0.018rem;
     text-transform: capitalize;
-      transition: color $transitionDefault;
-      @include hover{
-        color: $cLightBlue;
-      }
+
+
     ._active, &._active {
       font-weight: 700;
       pointer-events: none;
@@ -55,14 +61,8 @@
   }
 
   .theme-dark & {
-    &__item, &__button-lang {
+    &__button-lang:not(:hover), &__item, &__item ._active {
       color: inherit;
-      @include hover{
-        color: $cLightBlue;
-      }
-      ._active, &._active {
-        color: inherit;
-      }
     }
 
     background-color: $cBlack2;
@@ -86,6 +86,7 @@
       align-items: center;
       justify-content: flex-end;
       padding: 0;
+      width: initial;
     }
     &__lang, &__nav, &__contact-us, &__list {
       margin-bottom: 0;

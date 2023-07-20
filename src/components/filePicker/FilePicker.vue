@@ -1,14 +1,38 @@
 <template>
   <div class="file-picker">
     <div class="file-picker__files">
-      <div
-        v-for="item in modelValue"
-        :key="item.lastModified + item.name"
-        class="file-picker__item"
-        @click="()=>handelRemoveFile(item)"
-      >
-        {{ item.name }}
-      </div>
+      <template v-if="modelValue.length">
+        <div
+          v-for="item in modelValue"
+          :key="item.lastModified + item.name"
+          class="file-picker__item file-picker-item"
+        >
+          <span class="file-picker-item__label">
+            {{ item.name }}
+          </span>
+
+          <svg
+            class="file-picker-item__delete"
+            viewBox="0 0 30 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            @click="()=>handelRemoveFile(item)"
+          >
+            <path
+              d="M21.7279 18.7279L9 6"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M9.0001 18.7279L21.728 6"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </template>
     </div>
     <label
       class="file-picker__body"
@@ -26,6 +50,7 @@
 
       <span class="file-picker__label"> {{ label }}</span>
       <input
+        :multiple="isMultiple"
         type="file"
         class="file-picker__input"
         @input="handelChangeInput"
@@ -34,7 +59,7 @@
   </div>
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 import { defineComponent, PropType } from 'vue'
 import './style.scss'
 import { useLang } from 'src/hooks/useLang'
@@ -46,6 +71,10 @@ export default defineComponent({
     label: {
       type: String,
       default: ''
+    },
+    isMultiple: {
+      type: Boolean,
+      default: false
     },
     modelValue: {
       type: Array as PropType<File[]>,

@@ -11,8 +11,8 @@ export const useController = () => {
   }
   useBlockBody(isShowPopupContactUs, 'contactUs')
   const handelSubmitForm = async (formData: FormData) => {
-    console.log(formData)
     await store.dispatch('general/sendMessage', formData)
+    handelCloseBlock()
   }
   return {
     isShowPopupContactUs,

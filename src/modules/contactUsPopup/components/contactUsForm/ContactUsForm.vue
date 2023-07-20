@@ -4,32 +4,24 @@
     @submit.prevent="handelSubmitForm"
   >
     <div class="contact-us-popup-form__field-list contact-us-popup-form__field-list_text">
-      <div class="contact-us-popup-form__field">
+      <div
+        v-for="field in fields"
+        :key="field.name"
+        :class="['contact-us-popup-form__field', {'contact-us-popup-form__field--text-area': field.isArea}]"
+      >
         <CustomInput
-          v-model="fields.name.value"
-          :is-error="fields.name.isError"
-          :placeholder="lang.contactUsPopup.fields.name"
-        />
-      </div>
-      <div class="contact-us-popup-form__field">
-        <CustomInput
-          v-model="fields.email.value"
-          :is-error="fields.email.isError"
-          :placeholder="lang.contactUsPopup.fields.email"
-        />
-      </div>
-      <div class="contact-us-popup-form__field contact-us-popup-form__field--text-area">
-        <CustomInput
-          v-model="fields.message.value"
-          :is-error="fields.message.isError"
-          :placeholder="lang.contactUsPopup.fields.message"
-          is-area
+          v-model="field.value"
+          :is-area="field.isArea"
+          :is-error="field.isError"
+          :placeholder="field.placeholder"
+          :error-message="field.errorMessage"
         />
       </div>
     </div>
     <div class="contact-us-popup-form__field-list contact-us-popup-form__field-list_file">
       <FilePicker
         v-model="filesField"
+        is-multiple
         :label="lang.common.filePicker"
       />
     </div>
@@ -41,7 +33,7 @@
   </form>
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 import { defineComponent } from 'vue'
 import CustomInput from 'components/customInput/CustomInput.vue'
 import { useLang } from 'src/hooks/useLang'
@@ -52,7 +44,11 @@ import { useController } from './controller'
 
 export default defineComponent({
   name: 'ContactUsPopupForm',
-  components: { FilePicker, PrimaryButton, CustomInput },
+  components: {
+    FilePicker,
+    PrimaryButton,
+    CustomInput
+  },
   setup (_, { emit }) {
     const lang = useLang()
     const controller = useController({ emit })

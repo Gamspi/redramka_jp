@@ -5,6 +5,7 @@
 
   &__link, &__title {
     font-family: $Quicksand;
+
   }
 
   &__title {
@@ -20,6 +21,10 @@
     font-size: 1.6rem;
     line-height: 130%;
     font-weight: 300;
+    transition: color $transitionDefault;
+    @include hover {
+      color : $cLightBlue
+    }
   }
 
   &__body {

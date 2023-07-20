@@ -12,21 +12,33 @@
     object-fit: cover;
   }
 
-  &__dots-blue, &__dots-red {
+  &__dots {
     position: absolute;
     z-index: -1;
     width: 10rem;
     height: 7.093rem;
-  }
 
-  &__dots-red {
-    top: 0;
-    right: -.1rem;
-  }
+    &--red {
+      top: 0;
+      right: -.1rem;
+    }
 
-  &__dots-blue {
-    bottom: .5rem;
-    left: -.1rem;
+    &--blue, &--white {
+      bottom: .5rem;
+      left: -.1rem;
+    }
+
+    &--green, &--white {
+      display: none;
+    }
+    .theme-dark & {
+      &--blue {
+        display: none;
+      }
+      &--white {
+        display: initial;
+      }
+    }
   }
 
   @include minMediaDesktop {
@@ -37,18 +49,40 @@
       margin: auto;
       transform: translateX(.3rem);
     }
+    &__dots {
+      &--red {
+        top: initial;
+        right: initial;
+        bottom: -.3rem;
+        left: 29.4rem;
+      }
 
-    &__dots-red {
-      top: initial;
-      right: initial;
-      bottom: -.3rem;
-      left: 29.4rem;
-    }
+      &--blue {
+        bottom: initial;
+        top: -.9rem;
+        left: 25.8rem;
+      }
 
-    &__dots-blue {
-      bottom: initial;
-      top: -.9rem;
-      left: 25.8rem;
+      &--white {
+        bottom: initial;
+        top: -.9rem;
+        left: 25.8rem;
+      }
+
+      &--green {
+        display: initial;
+        transform: rotate(45deg);
+        bottom: 3.3rem;
+        left: 33.7rem;
+      }
+      .theme-dark & {
+        &--blue {
+          display: none;
+        }
+        &--white {
+          display: initial;
+        }
+      }
     }
   }
 }

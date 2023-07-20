@@ -1,5 +1,5 @@
 <template>
-  <label
+  <div
     :class="['custom-input', {
       'custom-input--fill': modelValue || defaultValue,
       'custom-input--error': isError,
@@ -7,7 +7,7 @@
       '_focus': isFocused,
     }]"
   >
-    <div class="custom-input__body">
+    <label class="custom-input__body">
       <input
         v-if="!isArea"
         :type="type"
@@ -29,14 +29,14 @@
       >
         {{ placeholder }}
       </span>
-    </div>
+    </label>
     <transition name="fabe-height">
       <span
         v-if="errorMessage && isError"
         class="custom-input__error"
       > {{ errorMessage }}</span>
     </transition>
-  </label>
+  </div>
 </template>
 
 <script lang="ts">

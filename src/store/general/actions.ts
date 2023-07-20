@@ -4,6 +4,7 @@ import { GeneralStateInterface } from './state'
 import LoadService from '../../services/LoadService'
 import apiLinks from '../apiLinks.json'
 import PostService from 'src/services/PostService'
+import axios from 'axios'
 
 const actions: ActionTree<GeneralStateInterface, StateInterface> = {
   async loadMenuList (): Promise<void> {
@@ -17,7 +18,8 @@ const actions: ActionTree<GeneralStateInterface, StateInterface> = {
     await context.dispatch('loadMenuList')
   },
   async sendMessage (context, formData: FormData): Promise<void> {
-    const response = await PostService.apiRequest('json/reviews.json', formData)
+    formData.forEach(item => console.log(item))
+    const response = await axios.post('https://jsonplaceholder.typicode.com/posts', formData) // заглушка чтр бы сделать пост запрос
     console.log(response)
   }
 

@@ -34,6 +34,9 @@
       font-weight: 700;
       pointer-events: none;
       color: $cBlackSecondary;
+      .theme-dark & {
+        color: inherit;
+      }
     }
   }
 

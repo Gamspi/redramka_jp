@@ -20,8 +20,14 @@
     line-height: 2.4rem;
     letter-spacing: 0.018rem;
     text-transform: capitalize;
+      transition: color $transitionDefault;
+      @include hover{
+        color: $cLightBlue;
+      }
     ._active, &._active {
       font-weight: 700;
+      pointer-events: none;
+      color: $cBlackSecondary;
     }
   }
 
@@ -51,6 +57,12 @@
   .theme-dark & {
     &__item, &__button-lang {
       color: inherit;
+      @include hover{
+        color: $cLightBlue;
+      }
+      ._active, &._active {
+        color: inherit;
+      }
     }
 
     background-color: $cBlack2;

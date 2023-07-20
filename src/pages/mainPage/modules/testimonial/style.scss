@@ -56,12 +56,11 @@
     }
     &__dots {
       display: block;
-
       > svg {
         position: absolute;
         width: 9.8475rem;
         height: 7.0926rem;
-
+        z-index: -1;
         &:first-child {
           right: 7.5rem;
           top: 46.7rem;

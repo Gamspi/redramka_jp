@@ -1,19 +1,13 @@
 import { LangEnum } from 'src/utils/enum/langEnum'
 
 interface LangContentType {
-  'name': string,
-  'specialty': string,
-  'text': string
-}
-
-export interface ResponseReview {
-  'id': string,
-  [LangEnum.RU]: LangContentType,
-  [LangEnum.ENG]: LangContentType
+  name: string,
+  specialty: string,
+  text: string
 }
 
 export interface ReviewType {
-  'id': string,
+  id: string,
   [LangEnum.RU]: LangContentType,
   [LangEnum.ENG]: LangContentType
 }

@@ -1,16 +1,17 @@
 import { LangEnum } from 'src/utils/enum/langEnum'
 
-interface LangContentType {
+export interface LangContentType {
   name: string,
   specialty: string,
   text: string
 }
 
 export interface ReviewType {
-  id: string,
+  id: string | number,
   [LangEnum.RU]: LangContentType,
   [LangEnum.ENG]: LangContentType
 }
+
 export interface TestimonialStateInterface {
   list: ReviewType[];
 }

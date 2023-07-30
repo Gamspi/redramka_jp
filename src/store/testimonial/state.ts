@@ -1,4 +1,4 @@
-import { TestimonialStateInterface } from 'src/store/testimonial/type'
+import { TestimonialStateInterface } from 'src/store/testimonial/testimonial'
 
 function state (): TestimonialStateInterface {
   return {

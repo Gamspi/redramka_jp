@@ -9,7 +9,7 @@ import {
 import general from './general'
 import testimonial from './testimonial'
 import { GeneralStateInterface } from './general/state'
-import { TestimonialStateInterface } from './testimonial/type'
+import { TestimonialStateInterface } from './testimonial/testimonial'
 
 // import example from './module-example'
 // import { ExampleStateInterface } from './module-example/state';

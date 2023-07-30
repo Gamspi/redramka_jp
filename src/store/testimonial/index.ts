@@ -1,7 +1,7 @@
 import { Module } from 'vuex'
 import { StateInterface } from '../index'
 import state from './state'
-import { TestimonialStateInterface } from './type'
+import { TestimonialStateInterface } from './testimonial'
 import actions from './actions'
 import mutations from './mutations'
 

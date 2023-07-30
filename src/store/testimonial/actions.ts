@@ -1,9 +1,9 @@
 import { ActionTree } from 'vuex'
 import { StateInterface } from '../index'
-import { TestimonialStateInterface } from './type'
+import { TestimonialStateInterface } from './testimonial'
 import { ResponseType } from '../type'
 import GetService from 'src/services/GetService'
-import { reviewConverter } from 'src/store/testimonial/converter'
+import { reviewConverter } from 'src/helpers/converters/converter'
 
 const actions: ActionTree<TestimonialStateInterface, StateInterface> = {
   async getReviews (context) {
